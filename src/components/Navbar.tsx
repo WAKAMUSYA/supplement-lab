@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <>
       {/* Main Header */}
-      <header className="sticky top-0 z-[100] w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <header className="sticky top-0 z-[110] w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="text-xl font-bold flex items-center gap-2">
             <span className="text-primary text-2xl">🔬</span>
@@ -58,7 +58,7 @@ export default function Navbar() {
           {/* Mobile Menu Toggle Button */}
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-gray-900 hover:text-primary focus:outline-none z-[110]"
+            className="md:hidden p-2 text-gray-900 hover:text-primary focus:outline-none relative z-[120]"
             aria-label={isOpen ? "メニューを閉じる" : "メニューを開く"}
           >
             {isOpen ? (
@@ -76,7 +76,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-0 z-[105] md:hidden bg-white transition-all duration-300 transform ${
+        className={`fixed inset-0 z-[100] md:hidden bg-white transition-all duration-300 transform ${
           isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 invisible"
         }`}
       >
