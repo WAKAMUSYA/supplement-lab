@@ -64,12 +64,12 @@ export default function Home() {
 
       {/* Popular Ingredients */}
       <section className="container mx-auto px-4">
-        <div className="flex justify-between items-end mb-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
           <div>
-            <h2 className="text-3xl font-bold mb-2">人気・定番の成分</h2>
+            <h2 className="text-3xl font-bold mb-2 text-gray-900">人気・定番の成分</h2>
             <p className="text-gray-500 text-sm">まず知っておきたい、エビデンスレベルの高い成分</p>
           </div>
-          <Link href="/ingredients" className="text-primary font-medium hover:underline flex items-center gap-1">
+          <Link href="/ingredients" className="hidden md:flex text-primary font-medium hover:underline items-center gap-1">
             すべて見る <span>→</span>
           </Link>
         </div>
@@ -78,19 +78,21 @@ export default function Home() {
             <Link 
               key={item.slug} 
               href={`/ingredients/${item.slug}`}
-              className="group bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all card-hover"
+              className="group bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all card-hover flex flex-col h-full"
             >
               <div className="flex justify-between items-start mb-4">
-                <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">
+                <span className={`px-3 py-1 text-[10px] font-bold rounded-full ${
+                  item.evidenceLevel === '高' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
+                }`}>
                   エビデンス: {item.evidenceLevel}
                 </span>
                 <span className="text-gray-300 group-hover:text-primary transition-colors">🔍</span>
               </div>
               <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{item.name}</h3>
-              <p className="text-sm text-gray-500 line-clamp-3 mb-4 leading-relaxed">
+              <p className="text-sm text-gray-500 line-clamp-3 mb-4 leading-relaxed flex-grow">
                 {item.overview}
               </p>
-              <div className="flex flex-wrap gap-2 mt-auto">
+              <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-50">
                 {item.mainPurposes.slice(0, 2).map(p => (
                   <span key={p} className="text-[10px] bg-gray-100 text-gray-600 px-2 py-0.5 rounded">
                     #{p}
@@ -99,6 +101,11 @@ export default function Home() {
               </div>
             </Link>
           ))}
+        </div>
+        <div className="mt-8 md:hidden">
+          <Link href="/ingredients" className="flex justify-center items-center gap-2 py-4 border border-gray-200 rounded-xl text-primary font-bold">
+            すべての成分を見る <span>→</span>
+          </Link>
         </div>
       </section>
 
@@ -137,12 +144,12 @@ export default function Home() {
 
       {/* Latest Articles Section */}
       <section className="container mx-auto px-4">
-        <div className="flex justify-between items-end mb-10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
           <div>
-            <h2 className="text-3xl font-bold mb-2">読み物・特集</h2>
+            <h2 className="text-3xl font-bold mb-2 text-gray-900">読み物・特集</h2>
             <p className="text-gray-500">サプリメントをより深く知るための専門コラム</p>
           </div>
-          <Link href="/articles" className="text-primary font-medium hover:underline">
+          <Link href="/articles" className="hidden md:flex text-primary font-medium hover:underline">
             すべて見る →
           </Link>
         </div>
@@ -169,6 +176,11 @@ export default function Home() {
               </div>
             </Link>
           ))}
+        </div>
+        <div className="mt-8 md:hidden">
+          <Link href="/articles" className="flex justify-center items-center gap-2 py-4 border border-gray-200 rounded-xl text-primary font-bold">
+            すべての記事を見る <span>→</span>
+          </Link>
         </div>
       </section>
 

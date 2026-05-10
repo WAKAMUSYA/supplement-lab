@@ -55,34 +55,39 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden relative z-50 p-2 text-gray-600 hover:text-primary focus:outline-none"
+          className="md:hidden relative z-[60] p-2 text-gray-900 hover:text-primary focus:outline-none bg-white/50 rounded-lg backdrop-blur-sm"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
           <div className="w-6 h-5 relative flex flex-col justify-between">
-            <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`}></span>
+            <span className={`w-full h-0.5 bg-current transition-all duration-300 origin-left ${isOpen ? "rotate-45 translate-x-1" : ""}`}></span>
             <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isOpen ? "opacity-0" : ""}`}></span>
-            <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
+            <span className={`w-full h-0.5 bg-current transition-all duration-300 origin-left ${isOpen ? "-rotate-45 translate-x-1" : ""}`}></span>
           </div>
         </button>
 
         {/* Mobile Menu Overlay */}
         <div 
-          className={`fixed inset-0 bg-white/95 backdrop-blur-md z-40 md:hidden transition-all duration-300 ease-in-out ${
-            isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          className={`fixed inset-0 bg-white z-[55] md:hidden transition-all duration-500 ease-in-out ${
+            isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
           }`}
         >
-          <nav className="flex flex-col items-center justify-center h-full gap-8 text-xl font-bold">
-            {navLinks.map((link) => (
+          <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
+            <div className="w-16 h-px bg-gray-100 mb-4"></div>
+            {navLinks.map((link, i) => (
               <Link 
                 key={link.href} 
                 href={link.href}
-                className={`${pathname === link.href ? "text-primary" : "text-gray-800"}`}
+                className={`text-2xl font-bold transition-all duration-300 delay-[${i * 50}ms] ${
+                  pathname === link.href ? "text-primary translate-x-0" : "text-gray-800"
+                } ${isOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}
               >
                 {link.label}
               </Link>
             ))}
-          </nav>
+            <div className="w-16 h-px bg-gray-100 mt-4"></div>
+            <p className="text-xs text-gray-400 mt-8">筋トレサプリ研究室</p>
+          </div>
         </div>
       </div>
     </header>
