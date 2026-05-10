@@ -4,7 +4,7 @@ import { supplements, purposes } from "@/data/supplements";
 import { articles } from "@/data/articles";
 
 export default function Home() {
-  const popularIngredients = supplements.filter(s => 
+  const popularIngredients = supplements.filter(s =>
     ['creatine', 'protein', 'caffeine', 'citrulline'].includes(s.id)
   );
 
@@ -13,9 +13,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/images/hero.png" 
-            alt="Supplement Lab" 
+          <Image
+            src="/images/hero.png"
+            alt="Supplement Lab"
             fill
             priority
             className="object-cover opacity-50"
@@ -31,14 +31,14 @@ export default function Home() {
             「筋トレサプリ研究室」は、ランキングや煽り文句に頼らず、エビデンスに基づいた中立的な視点でサプリメント成分を解説するオンライン図鑑です。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
-              href="/ingredients" 
+            <Link
+              href="/ingredients"
               className="px-8 py-3 bg-primary hover:bg-blue-600 text-white rounded-full font-bold transition-all transform hover:scale-105"
             >
               成分一覧を見る
             </Link>
-            <Link 
-              href="/purposes" 
+            <Link
+              href="/purposes"
               className="px-8 py-3 bg-white hover:bg-gray-100 text-gray-900 rounded-full font-bold transition-all transform hover:scale-105"
             >
               目的から探す
@@ -75,15 +75,14 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {popularIngredients.map((item) => (
-            <Link 
-              key={item.slug} 
+            <Link
+              key={item.slug}
               href={`/ingredients/${item.slug}`}
               className="group bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all card-hover flex flex-col h-full"
             >
               <div className="flex justify-between items-start mb-4">
-                <span className={`px-3 py-1 text-[10px] font-bold rounded-full ${
-                  item.evidenceLevel === '高' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
-                }`}>
+                <span className={`px-3 py-1 text-[10px] font-bold rounded-full ${item.evidenceLevel === '高' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
+                  }`}>
                   エビデンス: {item.evidenceLevel}
                 </span>
                 <span className="text-gray-300 group-hover:text-primary transition-colors">🔍</span>
@@ -120,8 +119,8 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {purposes.slice(0, 4).map((purpose) => (
-            <Link 
-              key={purpose.slug} 
+            <Link
+              key={purpose.slug}
               href={`/purposes/${purpose.slug}`}
               className="flex flex-col p-8 bg-white rounded-3xl border border-gray-200 hover:border-primary hover:shadow-lg transition-all group card-hover"
             >
@@ -132,12 +131,11 @@ export default function Home() {
               </p>
             </Link>
           ))}
-          <Link 
+          <Link
             href="/purposes"
             className="flex flex-col items-center justify-center p-8 bg-blue-600 rounded-3xl text-white hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-200/50 group text-center"
           >
-            <span className="text-lg md:text-2xl font-bold mb-2">すべての目的を見る</span>
-            <span className="text-blue-200 group-hover:translate-x-2 transition-transform">→</span>
+            <span className="text-lg md:text-2xl font-bold mb-2">すべての目的を見る →</span>
           </Link>
         </div>
       </section>
@@ -157,14 +155,13 @@ export default function Home() {
           {[...articles].sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()).slice(0, 6).map((article) => (
             <Link key={article.id} href={`/articles/${article.slug}`} className="group">
               <div className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all card-hover h-full flex flex-col overflow-hidden">
-                <div className={`h-4 border-b border-gray-50 bg-gradient-to-r ${
-                  article.category === '基礎知識' ? 'from-blue-500 to-blue-300' :
+                <div className={`h-4 border-b border-gray-50 bg-gradient-to-r ${article.category === '基礎知識' ? 'from-blue-500 to-blue-300' :
                   article.category === '栄養学' ? 'from-green-500 to-green-300' :
-                  article.category === 'トレーニング' ? 'from-orange-500 to-red-400' :
-                  article.category === '成分検証' ? 'from-purple-500 to-indigo-400' :
-                  article.category === '比較解説' ? 'from-teal-500 to-cyan-400' :
-                  'from-gray-700 to-gray-500'
-                }`}></div>
+                    article.category === 'トレーニング' ? 'from-orange-500 to-red-400' :
+                      article.category === '成分検証' ? 'from-purple-500 to-indigo-400' :
+                        article.category === '比較解説' ? 'from-teal-500 to-cyan-400' :
+                          'from-gray-700 to-gray-500'
+                  }`}></div>
                 <div className="p-8 flex flex-col flex-grow">
                   <span className="text-[10px] font-bold text-blue-500 uppercase tracking-widest mb-4 block">{article.category}</span>
                   <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors line-clamp-2">{article.title}</h3>
@@ -189,7 +186,7 @@ export default function Home() {
         <div className="bg-gray-900 rounded-[2.5rem] md:rounded-[3rem] p-10 md:p-16 text-white overflow-hidden relative group border border-white/5">
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -mr-32 -mt-32 group-hover:bg-primary/30 transition-colors"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/10 rounded-full blur-[80px] -ml-24 -mb-24"></div>
-          
+
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
             <div className="max-w-2xl text-center md:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur rounded-full text-xs font-bold tracking-widest text-blue-300 mb-6 uppercase">
@@ -205,8 +202,8 @@ export default function Home() {
                 成分の質・コストパフォーマンス・信頼性の観点から、当研究室が選定した参考資料をまとめています。
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                <Link 
-                  href="/supplements" 
+                <Link
+                  href="/supplements"
                   className="px-10 py-4 bg-primary hover:bg-blue-600 text-white rounded-full font-bold transition-all transform hover:scale-105 shadow-xl shadow-primary/20"
                 >
                   参考サプリメントを見る
@@ -232,12 +229,11 @@ export default function Home() {
           <p className="text-blue-800 opacity-70 mb-8 max-w-lg mx-auto text-sm md:text-base">
             サプリメントに関する基本的な疑問から、マニアックな質問までをまとめたFAQページをご用意しています。
           </p>
-          <Link 
-            href="/faq" 
+          <Link
+            href="/faq"
             className="inline-flex items-center justify-center gap-2 w-full md:w-auto px-6 md:px-10 py-4 bg-primary hover:bg-blue-600 text-white rounded-full font-bold transition-all transform hover:scale-105 shadow-xl shadow-blue-200"
           >
             <span className="text-sm md:text-base">よくある質問 (FAQ) を見る</span>
-            <span className="text-xl">?</span>
           </Link>
         </div>
       </section>
