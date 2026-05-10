@@ -27,6 +27,7 @@ export default function Navbar() {
     { href: "/purposes", label: "目的から探す" },
     { href: "/stacks", label: "スタックガイド" },
     { href: "/articles", label: "読み物" },
+    { href: "/supplements", label: "参考サプリ" },
     { href: "/faq", label: "よくある質問" },
   ];
 
