@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-20 pb-20">
       {/* Hero Section */}
-      <section className="relative h-[500px] flex items-center justify-center overflow-hidden bg-gray-900">
+      <section className="relative h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/hero.png" 
@@ -103,7 +103,7 @@ export default function Home() {
       </section>
 
       {/* Purpose Section */}
-      <section className="container mx-auto px-4 py-16 bg-gray-50 rounded-[3rem]">
+      <section className="container mx-auto px-4 py-12 md:py-16 bg-gray-50 rounded-[2rem] md:rounded-[3rem]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">目的から探す</h2>
           <p className="text-gray-500 max-w-xl mx-auto">
@@ -174,14 +174,14 @@ export default function Home() {
 
       {/* FAQ Link Section */}
       <section className="container mx-auto px-4">
-        <div className="bg-blue-50 border border-blue-100 rounded-[3rem] p-12 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-blue-900">疑問は解決しましたか？</h2>
-          <p className="text-blue-800 opacity-70 mb-8 max-w-lg mx-auto">
+        <div className="bg-blue-50 border border-blue-100 rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-blue-900">疑問は解決しましたか？</h2>
+          <p className="text-blue-800 opacity-70 mb-8 max-w-lg mx-auto text-sm md:text-base">
             サプリメントに関する基本的な疑問から、マニアックな質問までをまとめたFAQページをご用意しています。
           </p>
           <Link 
             href="/faq" 
-            className="inline-flex items-center gap-2 px-10 py-4 bg-primary hover:bg-blue-600 text-white rounded-full font-bold transition-all transform hover:scale-105 shadow-xl shadow-blue-200"
+            className="inline-flex items-center justify-center gap-2 w-full md:w-auto px-10 py-4 bg-primary hover:bg-blue-600 text-white rounded-full font-bold transition-all transform hover:scale-105 shadow-xl shadow-blue-200"
           >
             <span>よくある質問 (FAQ) を見る</span>
             <span className="text-xl">?</span>

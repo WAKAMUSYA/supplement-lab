@@ -17,11 +17,17 @@
   --color-accent: var(--accent);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Inter', 'Noto Sans JP', sans-serif;
   line-height: 1.6;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .glass {

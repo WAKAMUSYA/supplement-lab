@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   keywords: "筋トレ, サプリメント, エビデンス, クレアチン, プロテイン, EAA, ビタミン",
 };
 
+import Navbar from "@/components/Navbar";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,29 +22,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${inter.variable} ${notoJp.variable}`}>
       <body className="antialiased min-h-screen flex flex-col">
-        <header className="sticky top-0 z-50 glass border-b border-gray-200">
-          <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold flex items-center gap-2">
-              <span className="text-primary text-2xl">🔬</span>
-              <span className="gradient-text">筋トレサプリ研究室</span>
-            </Link>
-            <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-              <Link href="/ingredients" className="hover:text-primary transition-colors">成分一覧</Link>
-              <Link href="/purposes" className="hover:text-primary transition-colors">目的から探す</Link>
-              <Link href="/articles" className="hover:text-primary transition-colors">読み物</Link>
-              <Link href="/faq" className="hover:text-primary transition-colors">よくある質問</Link>
-              <Link href="/about" className="hover:text-primary transition-colors">研究室について</Link>
-            </nav>
-            <div className="md:hidden">
-              {/* Mobile Menu Icon Placeholder */}
-              <button className="p-2">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </header>
+        <Navbar />
 
         <main className="flex-grow">
           {children}
