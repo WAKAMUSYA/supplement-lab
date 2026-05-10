@@ -184,6 +184,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Reference Supplements Section */}
+      <section className="container mx-auto px-4">
+        <div className="bg-gray-900 rounded-[2.5rem] md:rounded-[3rem] p-10 md:p-16 text-white overflow-hidden relative group border border-white/5">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -mr-32 -mt-32 group-hover:bg-primary/30 transition-colors"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/10 rounded-full blur-[80px] -ml-24 -mb-24"></div>
+          
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
+            <div className="max-w-2xl text-center md:text-left">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur rounded-full text-xs font-bold tracking-widest text-blue-300 mb-6 uppercase">
+                <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+                Recommendation Guide
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
+                どの製品を選べばいいか、<br className="md:hidden" />
+                迷っている方へ
+              </h2>
+              <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                「成分はわかったけれど、結局どれを買えばいいの？」という声に応え、
+                成分の質・コストパフォーマンス・信頼性の観点から、当研究室が選定した参考資料をまとめています。
+              </p>
+              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                <Link 
+                  href="/supplements" 
+                  className="px-10 py-4 bg-primary hover:bg-blue-600 text-white rounded-full font-bold transition-all transform hover:scale-105 shadow-xl shadow-primary/20"
+                >
+                  参考サプリメントを見る
+                </Link>
+              </div>
+            </div>
+            <div className="w-full md:w-1/3 flex justify-center">
+              <div className="relative">
+                <div className="text-8xl md:text-9xl opacity-20 transform -rotate-12">📦</div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-6xl md:text-7xl drop-shadow-2xl">💊</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Link Section */}
       <section className="container mx-auto px-4">
         <div className="bg-blue-50 border border-blue-100 rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 text-center">
