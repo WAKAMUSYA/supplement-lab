@@ -154,7 +154,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {articles.slice(0, 6).map((article) => (
+          {[...articles].sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()).slice(0, 6).map((article) => (
             <Link key={article.id} href={`/articles/${article.slug}`} className="group">
               <div className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all card-hover h-full flex flex-col overflow-hidden">
                 <div className={`h-4 border-b border-gray-50 bg-gradient-to-r ${

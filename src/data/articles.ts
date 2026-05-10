@@ -18,7 +18,7 @@ export const articles: Article[] = [
     title: '【徹底解説】クレアチンの効果を最大化する摂取方法と科学的根拠',
     excerpt: '筋力向上に最も効果的とされるクレアチン。そのメカニズムから、ローディングの必要性、摂取タイミングまでを科学的に紐解きます。',
     category: '基礎知識',
-    publishDate: '2026-05-10',
+    publishDate: '2026-01-05',
     author: '研究室 編集部',
     relatedIngredientSlug: 'creatine',
     content: `
@@ -56,7 +56,7 @@ export const articles: Article[] = [
     title: 'プロテイン摂取の黄金律：WPCとWPIの違いと最適なタイミング',
     excerpt: 'プロテインはいつ、どの種類を飲むべきか？「ゴールデンタイム」の真真実と、体質に合わせたプロテイン選びを解説します。',
     category: '栄養学',
-    publishDate: '2026-05-10',
+    publishDate: '2026-01-09',
     author: '研究室 編集部',
     relatedIngredientSlug: 'protein',
     content: `
@@ -92,7 +92,7 @@ export const articles: Article[] = [
     title: 'カフェインで限界を超える：パフォーマンス向上のための摂取戦略',
     excerpt: 'プレワークアウトとしても定番のカフェイン。集中力を高め、疲労を遅らせるための具体的な量とタイミングについて。',
     category: 'トレーニング',
-    publishDate: '2026-05-10',
+    publishDate: '2026-01-13',
     author: '研究室 編集部',
     relatedIngredientSlug: 'caffeine',
     content: `
@@ -131,7 +131,7 @@ export const articles: Article[] = [
     title: 'HMBの真実：上級者には効果がない？最新のエビデンスを検証',
     excerpt: '「プロテイン20杯分」のキャッチコピーで有名なHMB。初心者には有効とされる一方で、なぜ上級者には疑問視されるのか。',
     category: '成分検証',
-    publishDate: '2026-05-10',
+    publishDate: '2026-01-17',
     author: '研究室 編集部',
     relatedIngredientSlug: 'hmb',
     content: `
@@ -166,7 +166,7 @@ HMBは「筋肉を増やす」作用よりも、**「筋肉の分解を防ぐ」
     title: 'EAA vs BCAA：結局どちらを飲むべき？目的別の使い分けガイド',
     excerpt: 'アミノ酸サプリの二大巨頭、EAAとBCAA。成分の違いから、コストパフォーマンス、使い分けのタイミングまでを整理します。',
     category: '比較解説',
-    publishDate: '2026-05-10',
+    publishDate: '2026-01-21',
     author: '研究室 編集部',
     relatedIngredientSlug: 'eaa',
     content: `
@@ -207,7 +207,7 @@ HMBは「筋肉を増やす」作用よりも、**「筋肉の分解を防ぐ」
     title: 'アシュワガンダが筋トレ民に注目される理由：コルチゾール制御の科学',
     excerpt: '古くて新しいハーブ「アシュワガンダ」。ストレス対策だけでなく、筋力向上や回復にどう関与するのかを解説。',
     category: '最新トレンド',
-    publishDate: '2026-05-10',
+    publishDate: '2026-01-25',
     author: '研究室 編集部',
     relatedIngredientSlug: 'ashwagandha',
     content: `
@@ -241,7 +241,7 @@ HMBは「筋肉を増やす」作用よりも、**「筋肉の分解を防ぐ」
     title: 'マルトデキストリン活用術：太りにくい人のためのバルクアップ戦略',
     excerpt: 'ハードゲイナー（太りにくい体質）が筋肉を増やすために欠かせない、マルトデキストリンの効果的な使い方。',
     category: '栄養学',
-    publishDate: '2026-05-10',
+    publishDate: '2026-01-29',
     author: '研究室 編集部',
     relatedIngredientSlug: 'maltodextrin',
     content: `
@@ -274,7 +274,7 @@ HMBは「筋肉を増やす」作用よりも、**「筋肉の分解を防ぐ」
     title: 'ビタミンDと筋力：「日光のビタミン」がホルモン値に与える影響',
     excerpt: '多くの日本人が不足しているとされるビタミンD。単なる骨の健康だけでなく、筋力維持やテストステロンへの関与を解説。',
     category: '基礎知識',
-    publishDate: '2026-05-10',
+    publishDate: '2026-02-02',
     author: '研究室 編集部',
     relatedIngredientSlug: 'vitamin-d',
     content: `
@@ -307,7 +307,7 @@ HMBは「筋肉を増やす」作用よりも、**「筋肉の分解を防ぐ」
     title: 'リカバリーの科学：GABAとマグネシウムで「深い睡眠」を手に入れる',
     excerpt: '筋肉は寝ている間に作られる。睡眠の質を劇的に高めるための、GABAとマグネシウムの併用戦略を徹底解剖。',
     category: '最新トレンド',
-    publishDate: '2026-05-10',
+    publishDate: '2026-02-06',
     author: '研究室 編集部',
     relatedIngredientSlug: 'magnesium',
     content: `
@@ -343,7 +343,7 @@ GABAとマグネシウムを併用することで、**「脳の鎮静」と「�
     title: 'シトルリンマレート：パンプ感だけじゃない、持久力と回復への驚くべき効果',
     excerpt: 'プレワークアウトの定番成分、シトルリン。血管拡張による「パンプ感」の裏側にある、疲労物質除去のメカニズム。',
     category: '成分検証',
-    publishDate: '2026-05-10',
+    publishDate: '2026-02-10',
     author: '研究室 編集部',
     relatedIngredientSlug: 'citrulline',
     content: `
@@ -376,7 +376,7 @@ GABAとマグネシウムを併用することで、**「脳の鎮静」と「�
     title: 'フィッシュオイルの真価：なぜ全てのトレーニーがオメガ3を摂るべきか',
     excerpt: '単なる健康習慣ではない、筋肥大のサポートと炎症抑制。アスリートにおけるフィッシュオイルの重要性を紐解きます。',
     category: '栄養学',
-    publishDate: '2026-05-10',
+    publishDate: '2026-02-14',
     author: '研究室 編集部',
     relatedIngredientSlug: 'fish-oil',
     content: `
@@ -407,7 +407,7 @@ GABAとマグネシウムを併用することで、**「脳の鎮静」と「�
     title: '夜のプロテイン戦略：カゼイン vs ホエイ、睡眠中の筋合成を最大化するのは？',
     excerpt: '寝ている間のカタボリック（筋分解）を防ぐために最適なプロテインはどちらか。最新の研究結果を基に結論を出します。',
     category: '成分検証',
-    publishDate: '2026-05-10',
+    publishDate: '2026-02-18',
     author: '研究室 編集部',
     relatedIngredientSlug: 'casein',
     content: `
@@ -438,7 +438,7 @@ GABAとマグネシウムを併用することで、**「脳の鎮静」と「�
     title: '脂肪燃焼を加速させるスタック術：カルニチンとCLAの相乗効果',
     excerpt: '減量期の強い味方、燃焼系サプリメント。カルニチンとCLAを組み合わせることで、なぜ効率が上がるのか。',
     category: '栄養学',
-    publishDate: '2026-05-10',
+    publishDate: '2026-02-22',
     author: '研究室 編集部',
     relatedIngredientSlug: 'l-carnitine',
     content: `
@@ -470,7 +470,7 @@ GABAとマグネシウムを併用することで、**「脳の鎮静」と「�
     title: '究極の集中力を手に入れる：カフェイン×テアニン×チロシンの科学',
     excerpt: 'プレワークアウトを自作するなら外せない3成分。興奮を制御し、ゾーンに入るための配合比率を公開。',
     category: '最新トレンド',
-    publishDate: '2026-05-10',
+    publishDate: '2026-02-26',
     author: '研究室 編集部',
     relatedIngredientSlug: 'theanine',
     content: `
@@ -501,7 +501,7 @@ GABAとマグネシウムを併用することで、**「脳の鎮静」と「�
     title: '関節の寿命を延ばす：グルコサミンとクルクミンによるケア戦略',
     excerpt: '筋トレは関節の摩耗との戦いでもある。炎症を抑え、軟骨を守るための長期的なサプリメント戦略。',
     category: '基礎知識',
-    publishDate: '2026-05-10',
+    publishDate: '2026-03-02',
     author: '研究室 編集部',
     relatedIngredientSlug: 'glucosamine',
     content: `
@@ -532,7 +532,7 @@ GABAとマグネシウムを併用することで、**「脳の鎮静」と「�
     title: 'プレワークアウト vs コーヒー：どっちが筋トレに有利？徹底比較',
     excerpt: '手軽なコーヒーと、多成分配合のプレワークアウト。それぞれのメリット・デメリットと使い分けを解説。',
     category: '比較解説',
-    publishDate: '2026-05-10',
+    publishDate: '2026-03-06',
     author: '研究室 編集部',
     relatedIngredientSlug: 'caffeine',
     content: `
@@ -564,7 +564,7 @@ GABAとマグネシウムを併用することで、**「脳の鎮静」と「�
     title: '最強のタッグ：クレアチンとβアラニンの相乗効果で限界を超える',
     excerpt: '瞬発力のクレアチンと持久力のβアラニン。これらを組み合わせることで、なぜトレーニングボリュームが爆増するのか。',
     category: '成分検証',
-    publishDate: '2026-05-10',
+    publishDate: '2026-03-10',
     author: '研究室 編集部',
     relatedIngredientSlug: 'creatine',
     content: `
@@ -594,7 +594,7 @@ GABAとマグネシウムを併用することで、**「脳の鎮静」と「�
     title: 'ZMA（亜鉛・マグネシウム）の真実：テストステロンは本当に増えるのか？',
     excerpt: '夜用サプリの定番「ZMA」。そのリカバリー効果と、多くの人が誤解しているホルモンへの影響を整理。',
     category: '成分検証',
-    publishDate: '2026-05-10',
+    publishDate: '2026-03-14',
     author: '研究室 編集部',
     relatedIngredientSlug: 'zinc',
     content: `
@@ -623,7 +623,7 @@ ZMAは、亜鉛、マグネシウム、ビタミンB6の3つを特定の比率�
     title: '水だけでは足りない？トレーニングパフォーマンスを支える電解質の重要性',
     excerpt: 'パフォーマンス低下の原因は「水不足」ではなく「塩分不足」かも。筋痙攣を防ぎ、出力を維持するための水分補給戦略。',
     category: 'トレーニング',
-    publishDate: '2026-05-10',
+    publishDate: '2026-03-18',
     author: '研究室 編集部',
     relatedIngredientSlug: 'taurine',
     content: `
@@ -648,7 +648,7 @@ ZMAは、亜鉛、マグネシウム、ビタミンB6の3つを特定の比率�
     title: 'サプリメントにも「休息」が必要：カフェイン耐性をリセットする戦略',
     excerpt: '「最近プレワークアウトが効かない」と感じていませんか？耐性の仕組みと、効果を復活させるサイクル術。',
     category: 'トレーニング',
-    publishDate: '2026-05-10',
+    publishDate: '2026-03-22',
     author: '研究室 編集部',
     relatedIngredientSlug: 'caffeine',
     content: `
@@ -677,7 +677,7 @@ ZMAは、亜鉛、マグネシウム、ビタミンB6の3つを特定の比率�
     title: 'アダプトゲンの科学：ロディオラとアシュワガンダでオーバートレーニングを防ぐ',
     excerpt: '「体力が持たない」「疲れが抜けない」と感じる時に。ストレス適応能力を高めるハーブの正しい活用法。',
     category: '最新トレンド',
-    publishDate: '2026-05-10',
+    publishDate: '2026-03-26',
     author: '研究室 編集部',
     relatedIngredientSlug: 'rhodiola',
     content: `
@@ -700,7 +700,7 @@ ZMAは、亜鉛、マグネシウム、ビタミンB6の3つを特定の比率�
     title: '脳を鍛えて筋肉を操る：ノートロピック（脳サプリ）とマインドマッスルコネクション',
     excerpt: '筋肉を動かすのは「脳」からの指令。アルファGPCとチロシンで神経系をブーストし、フォームの質を極める。',
     category: '最新トレンド',
-    publishDate: '2026-05-10',
+    publishDate: '2026-03-30',
     author: '研究室 編集部',
     relatedIngredientSlug: 'alpha-gpc',
     content: `
@@ -723,7 +723,7 @@ ZMAは、亜鉛、マグネシウム、ビタミンB6の3つを特定の比率�
     title: 'ビートルートの衝撃：硝酸塩が爆発的な持久力を生むメカニズム',
     excerpt: 'オリンピック選手も注目する「赤い野菜」。より少ない酸素でより長く動ける、エリートアスリートの秘密兵器。',
     category: '基礎知識',
-    publishDate: '2026-05-10',
+    publishDate: '2026-04-03',
     author: '研究室 編集部',
     relatedIngredientSlug: 'beetroot',
     content: `
@@ -747,7 +747,7 @@ ZMAは、亜鉛、マグネシウム、ビタミンB6の3つを特定の比率�
     title: '腸内環境とバルクアップ：プロバイオティクスがプロテインの吸収を助ける？',
     excerpt: '「食べているのにデカくならない」原因は腸にあるかも。善玉菌が筋肉の成長に与える意外な影響。',
     category: '栄養学',
-    publishDate: '2026-05-10',
+    publishDate: '2026-04-07',
     author: '研究室 編集部',
     relatedIngredientSlug: 'probiotics',
     content: `
@@ -770,7 +770,7 @@ ZMAは、亜鉛、マグネシウム、ビタミンB6の3つを特定の比率�
     title: '関節と腱の防衛策：コラーゲンとビタミンCの相乗効果で怪我を防ぐ',
     excerpt: '筋肉は数週間で強くなるが、腱は数ヶ月かかる。長期的なトレーニング継続のための関節保護戦略。',
     category: '基礎知識',
-    publishDate: '2026-05-10',
+    publishDate: '2026-04-11',
     author: '研究室 編集部',
     relatedIngredientSlug: 'collagen',
     content: `
@@ -790,7 +790,7 @@ ZMAは、亜鉛、マグネシウム、ビタミンB6の3つを特定の比率�
     title: 'アスリートの長寿学：レスベラトロールとCoQ10でミトコンドリアを守る',
     excerpt: 'いつまでも若々しく、高強度なトレーニングを続けたい。細胞レベルから老化を食い止めるためのサプリメント。',
     category: '最新トレンド',
-    publishDate: '2026-05-10',
+    publishDate: '2026-04-15',
     author: '研究室 編集部',
     relatedIngredientSlug: 'resveratrol',
     content: `
@@ -811,7 +811,7 @@ ZMAは、亜鉛、マグネシウム、ビタミンB6の3つを特定の比率�
     title: 'ナチュラル・テストステロン・サポート：亜鉛、ビタミンD、トンカットアリの科学',
     excerpt: '男性ホルモンを自然な範囲で最大化する。エビデンスに基づいた活力を取り戻すための成分と摂取法。',
     category: '成分検証',
-    publishDate: '2026-05-10',
+    publishDate: '2026-04-19',
     author: '研究室 編集部',
     relatedIngredientSlug: 'tongkat-ali',
     content: `
@@ -833,7 +833,7 @@ ZMAは、亜鉛、マグネシウム、ビタミンB6の3つを特定の比率�
     title: '炎症のコントロール：クルクミンとフィッシュオイルで「攻めのリカバリー」',
     excerpt: '筋肉痛は喜ぶべきものだが、長すぎれば害になる。過剰な炎症を抑え、次のトレーニングを早める方法。',
     category: '栄養学',
-    publishDate: '2026-05-10',
+    publishDate: '2026-04-23',
     author: '研究室 編集部',
     relatedIngredientSlug: 'curcumin',
     content: `
@@ -853,7 +853,7 @@ ZMAは、亜鉛、マグネシウム、ビタミンB6の3つを特定の比率�
     title: '糖を味方につける：ALAとクロムによるインスリン感受性の改善',
     excerpt: '「糖質を摂ると太る」から「糖質を摂ると筋肉がつく」へ。栄養素を脂肪ではなく筋肉へ届ける技術。',
     category: '栄養学',
-    publishDate: '2026-05-10',
+    publishDate: '2026-04-27',
     author: '研究室 編集部',
     relatedIngredientSlug: 'ala',
     content: `
@@ -874,7 +874,7 @@ ZMAは、亜鉛、マグネシウム、ビタミンB6の3つを特定の比率�
     title: '藻類の力：スピルリナとクロレラがトレーニーのリカバリーを変える',
     excerpt: '化学合成ではない、天然の栄養素を凝縮。圧倒的な栄養密度で体の内側からコンディションを整える。',
     category: '最新トレンド',
-    publishDate: '2026-05-10',
+    publishDate: '2026-05-01',
     author: '研究室 編集部',
     relatedIngredientSlug: 'spirulina',
     content: `

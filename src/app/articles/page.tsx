@@ -33,12 +33,14 @@ export default function ArticlesPage() {
   const categories = ["すべて", "基礎知識", "栄養学", "トレーニング", "成分検証", "比較解説", "最新トレンド"];
 
   const filteredArticles = useMemo(() => {
-    return articles.filter((article) => {
-      const matchesCategory = selectedCategory === "すべて" || article.category === selectedCategory;
-      const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                           article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchesCategory && matchesSearch;
-    });
+    return articles
+      .filter((article) => {
+        const matchesCategory = selectedCategory === "すべて" || article.category === selectedCategory;
+        const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                             article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesSearch;
+      })
+      .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
   }, [selectedCategory, searchQuery]);
 
   return (
