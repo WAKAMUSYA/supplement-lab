@@ -25,9 +25,9 @@ export default function Navbar() {
   const navLinks = [
     { href: "/ingredients", label: "成分一覧" },
     { href: "/purposes", label: "目的から探す" },
+    { href: "/stacks", label: "スタックガイド" },
     { href: "/articles", label: "読み物" },
     { href: "/faq", label: "よくある質問" },
-    { href: "/about", label: "研究室について" },
   ];
 
   return (

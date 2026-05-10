@@ -506,6 +506,709 @@ export const supplements: Supplement[] = [
       '「ダイエットに劇的な効果がある」と言われた時期もありましたが、あくまでエネルギー代謝のサポート役です。'
     ],
     relatedSupplements: ['multivitamin', 'magnesium']
+  },
+  {
+    id: 'l-carnitine',
+    name: 'L-カルニチン',
+    slug: 'l-carnitine',
+    overview: '脂肪酸をミトコンドリアへ運び込み、エネルギーとして燃焼させるのを助ける成分です。',
+    benefits: [
+      '脂肪燃焼の効率化サポート',
+      '運動パフォーマンスの向上',
+      '筋肉痛の軽減と回復促進'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['減量', '持久力'],
+    dosage: '1日1,000-2,000mg',
+    timing: '運動の30-60分前、または食後',
+    targetAudience: '脂肪燃焼を加速させたい人、持久力を高めたい人',
+    precautions: [
+      '過剰摂取は下痢や魚臭い体臭の原因になる場合があります。',
+      '炭水化物と一緒に摂ることで、筋肉への取り込みが良くなるとされています。'
+    ],
+    misconceptions: [
+      '「飲むだけで脂肪が溶ける」わけではなく、運動と組み合わせることで効果を発揮します。'
+    ],
+    relatedSupplements: ['cla', 'caffeine']
+  },
+  {
+    id: 'cla',
+    name: 'CLA（共役リノール酸）',
+    slug: 'cla',
+    overview: '不飽和脂肪酸の一種で、脂肪の分解を促し、筋肉量を維持しながら減量するのを助けます。',
+    benefits: [
+      '脂肪細胞への脂肪蓄積の抑制',
+      '基礎代謝の向上サポート',
+      '筋肉量の維持（減量中）'
+    ],
+    evidenceLevel: '低',
+    mainPurposes: ['減量'],
+    dosage: '1日3,000-6,000mg',
+    timing: '食後（脂溶性のため）',
+    targetAudience: '筋肉を落とさずに体脂肪を絞りたい人',
+    precautions: [
+      '空腹時に摂ると胃の不快感を感じる場合があります。',
+      '効果を実感するには数ヶ月の継続が必要です。'
+    ],
+    misconceptions: [
+      '「短期間で劇的に痩せる」成分ではなく、長期的なボディコンポジションの改善を目的とします。'
+    ],
+    relatedSupplements: ['l-carnitine', 'protein']
+  },
+  {
+    id: 'glucosamine',
+    name: 'グルコサミン',
+    slug: 'glucosamine',
+    overview: '軟骨の材料となる成分で、激しいトレーニングによる関節への負担をケアします。',
+    benefits: [
+      '関節の痛みの緩和',
+      '軟骨の保護と修復サポート',
+      '可動域の維持'
+    ],
+    evidenceLevel: '低',
+    mainPurposes: ['疲労回復', '睡眠・回復'],
+    dosage: '1日1,500mg',
+    timing: '食後',
+    targetAudience: '重量を扱うトレーニー、関節に違和感がある人、中高年の運動愛好家',
+    precautions: [
+      'カニやエビ由来のものが多いため、甲殻類アレルギーの人は注意が必要です。',
+      '効果を感じるまでに時間がかかる場合が多いです。'
+    ],
+    misconceptions: [
+      '「飲めば関節が新品になる」わけではなく、あくまで摩耗の抑制や痛みの緩和が主目的です。'
+    ],
+    relatedSupplements: ['curcumin', 'fish-oil']
+  },
+  {
+    id: 'curcumin',
+    name: 'クルクミン（ウコン）',
+    slug: 'curcumin',
+    overview: 'ターメリックに含まれるポリフェノールで、強力な抗炎症作用を持ちます。',
+    benefits: [
+      '激しい運動による炎症の抑制',
+      '筋肉痛（DOMS）の軽減',
+      '抗酸化作用によるリカバリー促進'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['疲労回復', '睡眠・回復'],
+    dosage: '1日500mg（吸収率を高めた製品を推奨）',
+    timing: '食後',
+    targetAudience: 'オーバートレーニングを防ぎたい人、関節の健康を保ちたい人',
+    precautions: [
+      'クルクミン単体では吸収率が非常に低いため、黒胡椒成分（ピペリン）配合のものなどが推奨されます。'
+    ],
+    misconceptions: [
+      '「お酒を飲む人だけのもの」ではなく、実はアスリートのコンディショニングに非常に有用です。'
+    ],
+    relatedSupplements: ['fish-oil', 'glucosamine']
+  },
+  {
+    id: 'theanine',
+    name: 'テアニン',
+    slug: 'theanine',
+    overview: '緑茶に含まれるアミノ酸で、カフェインの興奮作用を和らげつつ集中力を高める効果があります。',
+    benefits: [
+      'リラックス効果と集中力の両立',
+      'カフェインによる「ジッター（震えや不安）」の抑制',
+      '睡眠の質の改善'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['集中力', '睡眠・回復'],
+    dosage: '100-200mg',
+    timing: 'プレワークアウト（カフェインと同時）、または就寝前',
+    targetAudience: 'カフェインの副作用を抑えたい人、ゾーンに入りたい人',
+    precautions: [
+      '非常に安全性が高い成分です。'
+    ],
+    misconceptions: [
+      '「眠くなる成分」と思われがちですが、日中に摂っても眠気より「落ち着いた集中」をもたらします。'
+    ],
+    relatedSupplements: ['caffeine', 'tyrosine', 'gaba']
+  },
+  {
+    id: 'tyrosine',
+    name: 'チロシン',
+    slug: 'tyrosine',
+    overview: 'ドーパミンやアドレナリンの材料となるアミノ酸で、精神的な持久力と集中力を支えます。',
+    benefits: [
+      'ストレス下での認知機能維持',
+      'モチベーションの維持',
+      'メンタル疲労の軽減'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['集中力'],
+    dosage: '500-2,000mg',
+    timing: 'トレーニングの30-60分前',
+    targetAudience: '仕事終わりでトレーニングのやる気が出ない人、集中力を切らしたくない人',
+    precautions: [
+      '甲状腺ホルモンの材料にもなるため、甲状腺疾患がある人は医師に相談してください。'
+    ],
+    misconceptions: [
+      '「飲めばハイになる」ような薬物的な効果ではなく、あくまで精神的リソースを枯渇させないためのサポートです。'
+    ],
+    relatedSupplements: ['caffeine', 'theanine']
+  },
+  {
+    id: 'fish-oil',
+    name: 'フィッシュオイル（オメガ3）',
+    slug: 'fish-oil',
+    overview: 'EPA・DHAを豊富に含む良質な脂質。心血管の健康から抗炎症まで、あらゆるトレーニーの必須成分です。',
+    benefits: [
+      '筋肉の炎症抑制とリカバリー促進',
+      'タンパク質合成のわずかな促進サポート',
+      '関節の健康維持',
+      'インスリン感受性の改善'
+    ],
+    evidenceLevel: '高',
+    mainPurposes: ['疲労回復', '睡眠・回復', '筋肥大'],
+    dosage: 'EPA/DHAの合計として1日1,000-2,000mg',
+    timing: '食後',
+    targetAudience: '魚をあまり食べない全ての人、ハードなトレーニングをする人',
+    precautions: [
+      '血液をサラサラにする作用があるため、手術前や抗凝固薬を飲んでいる場合は医師に相談。',
+      '酸化しやすいため、高品質なものを選び、涼しい場所で保管してください。'
+    ],
+    misconceptions: [
+      '「脂肪だから太る」と避けがちですが、むしろ代謝を整えるために不可欠な「油」です。'
+    ],
+    relatedSupplements: ['multivitamin', 'curcumin']
+  },
+  {
+    id: 'ala',
+    name: 'ALA（α-リポ酸）',
+    slug: 'ala',
+    overview: '強力な抗酸化作用を持ち、糖代謝（エネルギー産生）を助けるビタミン様物質です。',
+    benefits: [
+      'インスリン感受性の向上（糖の取り込み促進）',
+      '他のビタミンの再利用サポート',
+      '脂肪燃焼のサポート'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['減量', '疲労回復'],
+    dosage: '300-600mg',
+    timing: '炭水化物を含む食事と一緒に',
+    targetAudience: '減量中の人、糖質の代謝を効率化したい人',
+    precautions: [
+      '一部の人で低血糖症状（冷や汗、震えなど）が出る場合があるため、注意が必要です。'
+    ],
+    misconceptions: [
+      '「ただの燃焼系サプリ」ではなく、細胞レベルでエネルギー効率を高める働きをします。'
+    ],
+    relatedSupplements: ['creatine', 'multivitamin']
+  },
+  {
+    id: 'casein',
+    name: 'カゼインプロテイン',
+    slug: 'casein',
+    overview: '牛乳に含まれるタンパク質の80%を占める成分。ホエイと異なり、ゆっくりと吸収されるのが特徴です。',
+    benefits: [
+      'アミノ酸を長時間（7-8時間）供給し続ける',
+      '就寝中の筋分解を強力に抑制',
+      '腹持ちが非常に良い'
+    ],
+    evidenceLevel: '高',
+    mainPurposes: ['筋肥大', '睡眠・回復', '減量'],
+    dosage: '1回20-40g',
+    timing: '就寝前、または長時間食事が摂れない時',
+    targetAudience: 'バルクアップ中の人、減量中で空腹感を抑えたい人',
+    precautions: [
+      'ホエイに比べてドロっとしており、飲みにくいと感じる場合があります。',
+      '吸収が遅いため、トレーニング直後の摂取には向きません。'
+    ],
+    misconceptions: [
+      '「ホエイより劣る」わけではなく、用途（タイミング）が異なるだけです。'
+    ],
+    relatedSupplements: ['protein', 'magnesium']
+  },
+  {
+    id: 'taurine',
+    name: 'タウリン',
+    slug: 'taurine',
+    overview: '含硫アミノ酸の一種。細胞内の水分バランスを整え、筋肉の収縮をサポートします。',
+    benefits: [
+      '持久的パフォーマンスの向上',
+      '筋肉のけいれんやこわばりの予防',
+      '抗酸化作用と心臓保護'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['持久力', '疲労回復'],
+    dosage: '1,000-3,000mg',
+    timing: '運動前、または食後',
+    targetAudience: 'ハードな有酸素運動をする人、筋肉がつりやすい人',
+    precautions: [
+      '非常に安全性が高い成分です。'
+    ],
+    misconceptions: [
+      '「エナジードリンクにしか入っていない」と思われがちですが、単体でのサプリメント摂取も有効です。'
+    ],
+    relatedSupplements: ['caffeine', 'magnesium']
+  },
+  {
+    id: 'rhodiola',
+    name: 'ロディオラ',
+    slug: 'rhodiola',
+    overview: '高山地帯に自生するハーブで、精神的・肉体的な疲労への抵抗力を高めるアダプトゲンです。',
+    benefits: [
+      'ストレスによる疲労感の軽減',
+      '集中力と認知機能の維持',
+      '持久的パフォーマンスの向上'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['集中力', '疲労回復'],
+    dosage: 'ロザビン3%規格として300-600mg',
+    timing: '朝、またはトレーニングの30-60分前',
+    targetAudience: 'ハードワークとトレーニングを両立させている人',
+    precautions: [
+      '夕方以降に摂ると、興奮して眠れなくなる場合があります。'
+    ],
+    misconceptions: [
+      '「ただの気休め」ではなく、複数の臨床試験で疲労軽減効果が確認されています。'
+    ],
+    relatedSupplements: ['ashwagandha', 'caffeine']
+  },
+  {
+    id: 'cordyceps',
+    name: '冬虫夏草 (Cordyceps)',
+    slug: 'cordyceps',
+    overview: 'キノコの一種で、酸素摂取効率を高め、持久力を向上させる働きがあります。',
+    benefits: [
+      '最大酸素摂取量（VO2 max）の向上サポート',
+      'ATP産生の効率化',
+      '免疫機能の調整'
+    ],
+    evidenceLevel: '低',
+    mainPurposes: ['持久力', '疲労回復'],
+    dosage: '1日1,000-3,000mg',
+    timing: 'トレーニング前、または毎食後',
+    targetAudience: '持久系アスリート、高強度のインターバルトレーニングをする人',
+    precautions: [
+      'キノコアレルギーがある場合は注意。',
+      '高品質なCS-4株などが推奨されます。'
+    ],
+    misconceptions: [
+      '「虫から生えるグロテスクなもの」というイメージが強いですが、サプリメントは菌糸体を培養したものが主流です。'
+    ],
+    relatedSupplements: ['rhodiola', 'coq10']
+  },
+  {
+    id: 'tongkat-ali',
+    name: 'トンカットアリ',
+    slug: 'tongkat-ali',
+    overview: '東南アジア原産のハーブで、男性ホルモンの最適化と活力を支えるために使われます。',
+    benefits: [
+      '自由テストステロン値のサポート',
+      '筋力向上と除脂肪体重の増加',
+      'リビドー（活力）の向上'
+    ],
+    evidenceLevel: '低',
+    mainPurposes: ['筋力向上', '睡眠・回復'],
+    dosage: '200:1濃縮エキスとして200-400mg',
+    timing: '朝食後、または毎食後',
+    targetAudience: '加齢による活力低下を感じるトレーニー、ハードに追い込む男性',
+    precautions: [
+      '偽物や低品質な製品が多いため、信頼できるメーカーを選ぶことが重要です。',
+      '過剰摂取はイライラ感や不眠を招く可能性があります。'
+    ],
+    misconceptions: [
+      '「ステロイドのような劇的な変化」を期待するものではなく、あくまで自然な範囲での最適化です。'
+    ],
+    relatedSupplements: ['zinc', 'ashwagandha', 'maca']
+  },
+  {
+    id: 'panax-ginseng',
+    name: '高麗人参 (Ginseng)',
+    slug: 'panax-ginseng',
+    overview: '最も有名なアダプトゲンの一つ。滋養強壮だけでなく、認知機能や免疫力にも関与します。',
+    benefits: [
+      '全身の倦怠感の軽減',
+      '集中力と気分の改善',
+      'インスリン感受性のサポート'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['疲労回復', '集中力'],
+    dosage: 'ジンセノサイド含有量に応じて1日200-500mg',
+    timing: '朝、またはトレーニング前',
+    targetAudience: '常に疲れを感じている人、メンタル面も強化したい人',
+    precautions: [
+      'カフェインと一緒に摂ると、興奮が強まりすぎることがあります。',
+      '長期間の連続使用より、時々休みを入れる「サイクル」が推奨されます。'
+    ],
+    misconceptions: [
+      '「高齢者向け」と思われがちですが、若年層のパフォーマンス維持にも有効です。'
+    ],
+    relatedSupplements: ['rhodiola', 'multivitamin']
+  },
+  {
+    id: 'fenugreek',
+    name: 'フェヌグリーク',
+    slug: 'fenugreek',
+    overview: 'スパイスとしても使われるハーブで、糖代謝の改善や男性ホルモンのサポートに利用されます。',
+    benefits: [
+      '血糖値の安定化サポート',
+      'テストステロンの遊離を助ける可能性',
+      '食欲のコントロール（減量時）'
+    ],
+    evidenceLevel: '低',
+    mainPurposes: ['筋力向上', '減量'],
+    dosage: '標準化エキスとして500-600mg',
+    timing: '夕食後、または就寝前',
+    targetAudience: '体脂肪を抑えつつ筋力を維持したい人',
+    precautions: [
+      '体臭や尿がメープルシロップのような甘い匂いになることがあります。',
+      '糖尿病薬を服用中の場合は医師に相談。'
+    ],
+    misconceptions: [
+      '「カレーに入っているからサプリは不要」ということはなく、有効成分（テストフェン等）を濃縮したサプリが一般的です。'
+    ],
+    relatedSupplements: ['zinc', 'ala']
+  },
+  {
+    id: 'alpha-gpc',
+    name: 'アルファGPC',
+    slug: 'alpha-gpc',
+    overview: 'コリンの補給源として優れており、脳内のアセチルコリン濃度を高め、集中力や成長ホルモンに関与します。',
+    benefits: [
+      '爆発的なパワー出力の向上',
+      'フォーカス（集中力）の劇的な向上',
+      '運動後の成長ホルモン分泌サポート'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['集中力', '筋力向上'],
+    dosage: '1回300-600mg',
+    timing: 'トレーニングの30-60分前',
+    targetAudience: '最大重量に挑戦する人、一瞬の集中力が必要な競技者',
+    precautions: [
+      '非常に吸湿性が高いため、保存状態に注意が必要です。'
+    ],
+    misconceptions: [
+      '「ただの脳サプリ」ではなく、近年の研究では瞬発的なパワー向上への有効性が注目されています。'
+    ],
+    relatedSupplements: ['tyrosine', 'caffeine']
+  },
+  {
+    id: 'huperzine-a',
+    name: 'ヒューペルジンA',
+    slug: 'huperzine-a',
+    overview: 'トウゲシバという植物から抽出される成分で、アセチルコリンの分解を抑えるノートロピック（脳機能改善）成分です。',
+    benefits: [
+      '記憶力と学習能力のサポート',
+      'マインドマッスルコネクション（意識と筋肉の連動）の強化',
+      '集中力の持続'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['集中力'],
+    dosage: '50-200mcg (マイクログラム)',
+    timing: 'トレーニング前',
+    targetAudience: 'フォームを細かく意識したい人、集中を切らしたくない人',
+    precautions: [
+      '非常に強力なため、過剰摂取は厳禁です。',
+      '1ヶ月使用したら1週間休むなどのサイクルが推奨されます。'
+    ],
+    misconceptions: [
+      '「副作用が怖い」と思われがちですが、用量を守れば安全性は高い成分です。'
+    ],
+    relatedSupplements: ['alpha-gpc', 'theanine']
+  },
+  {
+    id: 'bacopa',
+    name: 'バコパ (Bacopa Monnieri)',
+    slug: 'bacopa',
+    overview: '伝統的なハーブで、長期的な記憶力向上やストレス緩和に優れた効果を発揮します。',
+    benefits: [
+      '記憶形成のサポート',
+      '不安感の軽減とリラックス',
+      '抗酸化作用による脳の保護'
+    ],
+    evidenceLevel: '高',
+    mainPurposes: ['集中力', '睡眠・回復'],
+    dosage: 'バコシド50%規格として300mg',
+    timing: '食後（脂溶性のため）',
+    targetAudience: 'トレーニングのルーティンを確実にこなしたい人、メンタルを安定させたい人',
+    precautions: [
+      '即効性はなく、効果を実感するまでに8〜12週間の継続が必要です。',
+      '空腹時に摂ると胃腸に違和感が出ることがあります。'
+    ],
+    misconceptions: [
+      '「受験生向け」だけでなく、運動学習（技術習得）が必要なアスリートにも適しています。'
+    ],
+    relatedSupplements: ['ashwagandha', 'theanine']
+  },
+  {
+    id: 'resveratrol',
+    name: 'レスベラトロール',
+    slug: 'resveratrol',
+    overview: '赤ワインなどに含まれるポリフェノール。抗酸化・抗炎症のほか、ミトコンドリアの活性化が期待されます。',
+    benefits: [
+      '細胞のエイジングケア',
+      '心血管系の健康維持',
+      '持久力向上のサポート'
+    ],
+    evidenceLevel: '低',
+    mainPurposes: ['睡眠・回復', '持久力'],
+    dosage: '1日100-500mg',
+    timing: '朝食後',
+    targetAudience: 'いつまでも若々しくトレーニングを続けたい人',
+    precautions: [
+      '高用量の摂取がトレーニングの適応（筋肉の成長）をわずかに阻害するという説もあり、タイミングに注意。'
+    ],
+    misconceptions: [
+      '「ワインを飲めば足りる」わけではありません。有効量を摂るには数リットルのワインが必要なため、サプリが効率的です。'
+    ],
+    relatedSupplements: ['coq10', 'fish-oil']
+  },
+  {
+    id: 'quercetin',
+    name: 'ケルセチン',
+    slug: 'quercetin',
+    overview: 'タマネギなどに含まれるフラボノイド。抗酸化・抗炎症作用により、ハードな運動後の免疫低下を防ぎます。',
+    benefits: [
+      '運動後の風邪予防（免疫維持）',
+      '持久的パフォーマンスの向上',
+      '血流の改善サポート'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['疲労回復', '持久力'],
+    dosage: '1日500-1,000mg',
+    timing: '運動前、または毎食後',
+    targetAudience: 'ハードな追い込みで体調を崩しやすい人',
+    precautions: [
+      '単体では吸収率が低いため、ビタミンCや脂質と一緒に摂ることが推奨されます。'
+    ],
+    misconceptions: [
+      '「ただの健康成分」ではなく、近年は持久力のスタミナ強化成分としても研究されています。'
+    ],
+    relatedSupplements: ['vitamin-c', 'fish-oil']
+  },
+  {
+    id: 'spirulina',
+    name: 'スピルリナ',
+    slug: 'spirulina',
+    overview: '強力な抗酸化物質「フィコシアニン」を含むスーパーフード。筋肉のダメージ軽減に寄与します。',
+    benefits: [
+      '運動による酸化ストレスの軽減',
+      '筋損傷マーカー（CKなど）の低下',
+      '鉄分補給による持久力維持'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['疲労回復', '持久力'],
+    dosage: '1日2-5g',
+    timing: 'いつでも（食後が一般的）',
+    targetAudience: '天然由来のサプリメントを好む人、回復を早めたい人',
+    precautions: [
+      '重金属汚染のない、管理された環境で育てられた製品を選んでください。'
+    ],
+    misconceptions: [
+      '「タンパク質源」として紹介されますが、サプリメントの量ではタンパク質補給としては不十分です。'
+    ],
+    relatedSupplements: ['multivitamin', 'chlorella']
+  },
+  {
+    id: 'chlorella',
+    name: 'クロレラ',
+    slug: 'chlorella',
+    overview: '豊富なクロロフィルを含む藻類。デトックスや免疫サポートのほか、栄養補給に優れています。',
+    benefits: [
+      '免疫機能の強化',
+      '体内の有害物質の排出サポート',
+      'ビタミンB12の補給（ベジタリアンに有効）'
+    ],
+    evidenceLevel: '低',
+    mainPurposes: ['睡眠・回復', '疲労回復'],
+    dosage: '1日3-6g',
+    timing: 'いつでも',
+    targetAudience: '腸内環境を整えたい人、クリーンな体作りを目指す人',
+    precautions: [
+      '消化が少し悪いため、細胞壁破砕処理がされている製品を選びましょう。'
+    ],
+    misconceptions: [
+      '「スピルリナと同じ」と思われがちですが、成分構成が異なり、クロレラの方が解毒作用に重点があります。'
+    ],
+    relatedSupplements: ['spirulina', 'multivitamin']
+  },
+  {
+    id: 'beetroot',
+    name: 'ビートルート (Beetroot)',
+    slug: 'beetroot',
+    overview: '硝酸塩を豊富に含み、体内で一酸化窒素（NO）に変換されることで爆発的なパフォーマンスを生みます。',
+    benefits: [
+      '運動効率の向上（より少ない酸素で動ける）',
+      '持久力の底上げ',
+      '血圧の安定化'
+    ],
+    evidenceLevel: '高',
+    mainPurposes: ['持久力', '筋力向上'],
+    dosage: '硝酸塩として300-600mg（ジュースなら500ml程度）',
+    timing: 'トレーニングの2-3時間前',
+    targetAudience: 'タイムを縮めたい持久系アスリート、パンプ感を最大化したい人',
+    precautions: [
+      '摂取後に尿や便が赤くなることがありますが、無害です（ベーツリア）。',
+      'マウスウォッシュを使うと、口内の細菌が減りNOへの変換が阻害されます。'
+    ],
+    misconceptions: [
+      '「野菜ジュースだからマイルド」と思いきや、オリンピック選手も活用するほど強力なエビデンスがあります。'
+    ],
+    relatedSupplements: ['citrulline', 'arginine']
+  },
+  {
+    id: 'green-tea-extract',
+    name: '緑茶エキス (EGCG)',
+    slug: 'green-tea-extract',
+    overview: '緑茶のカテキン、特にEGCGを濃縮したもの。脂肪燃焼の加速と抗酸化に寄与します。',
+    benefits: [
+      '脂質代謝の向上',
+      '運動中の脂肪利用率の増加',
+      '強力な細胞保護（抗酸化）'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['減量', '疲労回復'],
+    dosage: 'EGCGとして1日400-500mg',
+    timing: '運動前、または食後',
+    targetAudience: '体脂肪を効率よく落としたい人、健康レベルを上げたい人',
+    precautions: [
+      '空腹時の高用量摂取は肝臓に負担をかける可能性があるため、必ず食後に。'
+    ],
+    misconceptions: [
+      '「緑茶を飲むだけで痩せる」わけではなく、運動時の脂肪燃焼を「加速」させるためのツールです。'
+    ],
+    relatedSupplements: ['caffeine', 'l-carnitine']
+  },
+  {
+    id: 'ginger-extract',
+    name: 'ショウガエキス (Ginger)',
+    slug: 'ginger-extract',
+    overview: '古くからの生薬。近年の研究では、筋損傷の軽減や関節の健康に有効であることが示されています。',
+    benefits: [
+      '筋肉痛（DOMS）の強度の低下',
+      '関節の違和感の緩和',
+      '消化機能のサポート'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['疲労回復', '睡眠・回復'],
+    dosage: '粉末として1日1,000-2,000mg',
+    timing: '食後、または毎食後',
+    targetAudience: '激しい筋肉痛に悩まされている人、胃腸を整えたい人',
+    precautions: [
+      '一度に大量に摂ると胸焼けの原因になることがあります。'
+    ],
+    misconceptions: [
+      '「体を温めるだけ」ではなく、サプリメントとしての高用量摂取は炎症マーカーを下げる働きがあります。'
+    ],
+    relatedSupplements: ['curcumin', 'fish-oil']
+  },
+  {
+    id: 'astaxanthin',
+    name: 'アスタキサンチン',
+    slug: 'astaxanthin',
+    overview: 'サケやエビに含まれる赤い色素。ビタミンEの数百倍とも言われる強力な抗酸化力を持ちます。',
+    benefits: [
+      '筋肉の持久力向上サポート',
+      '運動後の疲労感の軽減',
+      '目や肌の健康維持'
+    ],
+    evidenceLevel: '低',
+    mainPurposes: ['持久力', '疲労回復'],
+    dosage: '1日4-12mg',
+    timing: '脂質を含む食事の後',
+    targetAudience: '屋外での活動が多い人、長時間動き続けるアスリート',
+    precautions: [
+      '即効性はなく、1ヶ月程度の継続摂取が推奨されます。'
+    ],
+    misconceptions: [
+      '「美容成分」としてのイメージが強いですが、スポーツ界でもスタミナ維持成分として注目されています。'
+    ],
+    relatedSupplements: ['coq10', 'resveratrol']
+  },
+  {
+    id: 'collagen',
+    name: 'コラーゲンペプチド',
+    slug: 'collagen',
+    overview: 'タンパク質の一種で、特に関節、腱、靭帯、肌の構成要素になります。',
+    benefits: [
+      '関節の違和感や痛みの軽減',
+      '腱や靭帯の強化サポート',
+      '肌の弾力維持'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['睡眠・回復', '疲労回復'],
+    dosage: '1日10-15g',
+    timing: 'ビタミンCと一緒に、トレーニング前後または寝る前',
+    targetAudience: '関節への不安がある人、高強度のトレーニングを長く続けたい人',
+    precautions: [
+      '筋タンパク質合成の材料としては、プロテインの方が効率的です。'
+    ],
+    misconceptions: [
+      '「食べてもアミノ酸に分解されるから意味がない」というのは古い考えです。一部のペプチドが直接信号を送ることが分かっています。'
+    ],
+    relatedSupplements: ['vitamin-c', 'glucosamine']
+  },
+  {
+    id: 'biotin',
+    name: 'ビオチン (ビタミンB7)',
+    slug: 'biotin',
+    overview: '糖・脂質・タンパク質の代謝を助ける補酵素。エネルギー産生の土台を支えます。',
+    benefits: [
+      'エネルギー代謝の正常化',
+      '髪、肌、爪の健康維持',
+      '筋分解のわずかな抑制サポート'
+    ],
+    evidenceLevel: '高',
+    mainPurposes: ['睡眠・回復', '疲労回復'],
+    dosage: '1日500-5,000mcg (マイクログラム)',
+    timing: 'いつでも',
+    targetAudience: 'ハードな食事制限中の人、美容面もケアしたいトレーニー',
+    precautions: [
+      '生卵の白身を大量に食べるとビオチンの吸収が阻害されます（アビジン結合）。'
+    ],
+    misconceptions: [
+      '「髪を増やす薬」ではありません。不足している場合に、正常な成長をサポートするものです。'
+    ],
+    relatedSupplements: ['multivitamin', 'zinc']
+  },
+  {
+    id: 'chromium',
+    name: 'クロム (Chromium)',
+    slug: 'chromium',
+    overview: 'インスリンの働きを助け、血糖値のコントロールと筋肉への栄養取り込みをスムーズにするミネラルです。',
+    benefits: [
+      'インスリン感受性の向上',
+      '血糖値の安定による食欲抑制',
+      '除脂肪体重の維持サポート'
+    ],
+    evidenceLevel: '低',
+    mainPurposes: ['減量', '筋肥大'],
+    dosage: 'ピコリン酸クロムとして200-400mcg',
+    timing: '高炭水化物の食事の前',
+    targetAudience: '糖質制限中の人、バルクアップで脂肪をつけたくない人',
+    precautions: [
+      '糖尿病薬を服用中の場合は必ず医師に相談してください。'
+    ],
+    misconceptions: [
+      '「飲むだけで痩せる」わけではなく、インスリンの働きを正常化させるための「下地作り」です。'
+    ],
+    relatedSupplements: ['ala', 'fenugreek']
+  },
+  {
+    id: 'probiotics',
+    name: 'プロバイオティクス (乳酸菌等)',
+    slug: 'probiotics',
+    overview: '腸内環境を整える善玉菌。栄養の吸収効率を高め、免疫力を維持するために不可欠です。',
+    benefits: [
+      'タンパク質の吸収効率の向上',
+      '免疫力の強化（ハードな運動後の低下を防止）',
+      '腸内フローラの改善による体調維持'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['疲労回復', '睡眠・回復', '筋肥大'],
+    dosage: '製品の推奨量（菌数10億以上が目安）',
+    timing: '食後、または就寝前',
+    targetAudience: 'プロテインを飲むとお腹が張る人、体調管理を徹底したい人',
+    precautions: [
+      '自分に合う菌株を見つけることが重要。1ヶ月試して効果がなければ別の種類を。'
+    ],
+    misconceptions: [
+      '「お腹の調子を整えるだけ」ではありません。最新の研究では、腸内環境が筋肉の成長やメンタルにまで影響することが示されています。'
+    ],
+    relatedSupplements: ['glutamine', 'multivitamin']
   }
 ];
 
