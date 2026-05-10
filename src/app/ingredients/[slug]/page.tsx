@@ -8,6 +8,22 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const item = supplements.find((s) => s.slug === slug);
+
+  if (!item) return {};
+
+  return {
+    title: `${item.name}の効果・摂取方法・エビデンス`,
+    description: `${item.name}について、科学的根拠に基づいた効果、摂取量、タイミング、注意点を詳しく解説。エビデンスレベル: ${item.evidenceLevel}。`,
+    openGraph: {
+      title: `${item.name} | 筋トレサプリ研究室`,
+      description: item.overview,
+    },
+  };
+}
+
 export default async function IngredientPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const item = supplements.find((s) => s.slug === slug);
@@ -16,10 +32,27 @@ export default async function IngredientPage({ params }: { params: Promise<{ slu
     notFound();
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": item.name,
+    "description": item.overview,
+    "lastReviewed": "2024-05-10",
+    "mainEntity": {
+      "@type": "Substance",
+      "name": item.name,
+      "description": item.overview
+    }
+  };
+
   const related = supplements.filter(s => item.relatedSupplements.includes(s.slug));
 
   return (
     <article className="container mx-auto px-4 py-12 max-w-5xl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <nav className="text-sm text-gray-500 mb-8">
         <Link href="/" className="hover:text-primary">ホーム</Link>
         <span className="mx-2">/</span>

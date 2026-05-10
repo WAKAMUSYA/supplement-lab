@@ -7,21 +7,51 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const notoJp = Noto_Sans_JP({ subsets: ["latin"], variable: "--font-noto-jp" });
 
 export const metadata: Metadata = {
-  title: "筋トレサプリ研究室 | エビデンスに基づくサプリメント図鑑",
+  title: {
+    default: "筋トレサプリ研究室 | エビデンスに基づくサプリメント図鑑",
+    template: "%s | 筋トレサプリ研究室"
+  },
   description: "クレアチン、プロテイン、カフェインなど、筋トレサプリの成分を科学的根拠に基づいて解説する研究室風メディア。初心者にも分かりやすく、中立的な立場から情報をお届けします。",
-  keywords: "筋トレ, サプリメント, エビデンス, クレアチン, プロテイン, EAA, ビタミン",
+  keywords: ["筋トレ", "サプリメント", "エビデンス", "クレアチン", "プロテイン", "EAA", "ビタミン"],
+  authors: [{ name: "筋トレサプリ研究室" }],
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    url: "https://supplement-lab.example.com",
+    siteName: "筋トレサプリ研究室",
+    title: "筋トレサプリ研究室 | エビデンスに基づくサプリメント図鑑",
+    description: "科学的なエビデンスに基づいた中立的なサプリメント図鑑。あなたのトレーニングを支える成分を詳しく解説します。",
+    images: [
+      {
+        url: "/images/ogp.png",
+        width: 1200,
+        height: 630,
+        alt: "筋トレサプリ研究室",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "筋トレサプリ研究室 | エビデンスに基づくサプリメント図鑑",
+    description: "科学的なエビデンスに基づいた中立的なサプリメント図鑑。あなたのトレーニングを支える成分を詳しく解説します。",
+    images: ["/images/ogp.png"],
+  },
 };
 
 import Navbar from "@/components/Navbar";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html lang="ja" className={`${inter.variable} ${notoJp.variable}`}>
       <body className="antialiased min-h-screen flex flex-col">
+        {gaId && <GoogleAnalytics gaId={gaId} />}
         <Navbar />
 
         <main className="flex-grow">

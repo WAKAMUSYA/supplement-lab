@@ -9,6 +9,25 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const article = articles.find((a) => a.slug === slug);
+
+  if (!article) return {};
+
+  return {
+    title: article.title,
+    description: article.excerpt,
+    openGraph: {
+      title: `${article.title} | 筋トレサプリ研究室`,
+      description: article.excerpt,
+      type: "article",
+      publishedTime: article.publishDate,
+      authors: [article.author],
+    },
+  };
+}
+
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = articles.find((a) => a.slug === slug);
