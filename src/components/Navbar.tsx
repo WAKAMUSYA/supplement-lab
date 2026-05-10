@@ -31,65 +31,71 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 glass border-b border-gray-200">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold flex items-center gap-2 relative z-50">
-          <span className="text-primary text-2xl">🔬</span>
-          <span className="gradient-text">筋トレサプリ研究室</span>
-        </Link>
+    <>
+      {/* Main Header */}
+      <header className="sticky top-0 z-[100] w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+          <Link href="/" className="text-xl font-bold flex items-center gap-2">
+            <span className="text-primary text-2xl">🔬</span>
+            <span className="gradient-text">筋トレサプリ研究室</span>
+          </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.href} 
+                href={link.href}
+                className={`hover:text-primary transition-colors ${
+                  pathname === link.href ? "text-primary font-bold" : ""
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Mobile Menu Toggle Button */}
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 text-gray-900 hover:text-primary focus:outline-none z-[110]"
+            aria-label={isOpen ? "メニューを閉じる" : "メニューを開く"}
+          >
+            {isOpen ? (
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`fixed inset-0 z-[105] md:hidden bg-white transition-all duration-300 transform ${
+          isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 invisible"
+        }`}
+      >
+        <nav className="flex flex-col items-center justify-center h-full gap-8 px-6 pt-16">
           {navLinks.map((link) => (
             <Link 
               key={link.href} 
-              href={link.href} 
-              className={`transition-colors hover:text-primary ${
-                pathname === link.href ? "text-primary font-bold" : "text-gray-600"
+              href={link.href}
+              className={`text-2xl font-bold transition-colors ${
+                pathname === link.href ? "text-primary" : "text-gray-800"
               }`}
             >
               {link.label}
             </Link>
           ))}
+          <div className="w-12 h-1 bg-gray-100 rounded-full mt-4"></div>
+          <p className="text-xs text-gray-400">© 筋トレサプリ研究室</p>
         </nav>
-
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden relative z-[60] p-2 text-gray-900 hover:text-primary focus:outline-none bg-white/50 rounded-lg backdrop-blur-sm"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          <div className="w-6 h-5 relative flex flex-col justify-between">
-            <span className={`w-full h-0.5 bg-current transition-all duration-300 origin-left ${isOpen ? "rotate-45 translate-x-1" : ""}`}></span>
-            <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isOpen ? "opacity-0" : ""}`}></span>
-            <span className={`w-full h-0.5 bg-current transition-all duration-300 origin-left ${isOpen ? "-rotate-45 translate-x-1" : ""}`}></span>
-          </div>
-        </button>
-
-        {/* Mobile Menu Overlay */}
-        <div 
-          className={`fixed inset-0 bg-white z-[55] md:hidden transition-all duration-500 ease-in-out ${
-            isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
-          }`}
-        >
-          <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
-            <div className="w-16 h-px bg-gray-100 mb-4"></div>
-            {navLinks.map((link, i) => (
-              <Link 
-                key={link.href} 
-                href={link.href}
-                className={`text-2xl font-bold transition-all duration-300 delay-[${i * 50}ms] ${
-                  pathname === link.href ? "text-primary translate-x-0" : "text-gray-800"
-                } ${isOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="w-16 h-px bg-gray-100 mt-4"></div>
-            <p className="text-xs text-gray-400 mt-8">筋トレサプリ研究室</p>
-          </div>
-        </div>
       </div>
-    </header>
+    </>
   );
 }
