@@ -134,9 +134,9 @@ export default function Home() {
           ))}
           <Link 
             href="/purposes"
-            className="flex flex-col items-center justify-center p-8 bg-blue-600 rounded-3xl text-white hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-200/50 group"
+            className="flex flex-col items-center justify-center p-8 bg-blue-600 rounded-3xl text-white hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-200/50 group text-center"
           >
-            <span className="text-2xl font-bold mb-2">すべての目的を見る</span>
+            <span className="text-lg md:text-2xl font-bold mb-2">すべての目的を見る</span>
             <span className="text-blue-200 group-hover:translate-x-2 transition-transform">→</span>
           </Link>
         </div>
@@ -234,9 +234,9 @@ export default function Home() {
           </p>
           <Link 
             href="/faq" 
-            className="inline-flex items-center justify-center gap-2 w-full md:w-auto px-10 py-4 bg-primary hover:bg-blue-600 text-white rounded-full font-bold transition-all transform hover:scale-105 shadow-xl shadow-blue-200"
+            className="inline-flex items-center justify-center gap-2 w-full md:w-auto px-6 md:px-10 py-4 bg-primary hover:bg-blue-600 text-white rounded-full font-bold transition-all transform hover:scale-105 shadow-xl shadow-blue-200"
           >
-            <span>よくある質問 (FAQ) を見る</span>
+            <span className="text-sm md:text-base">よくある質問 (FAQ) を見る</span>
             <span className="text-xl">?</span>
           </Link>
         </div>

@@ -64,7 +64,7 @@ export default function SupplementsPage() {
                       価格の相場観
                     </h3>
                     <p className="text-sm text-gray-600 leading-relaxed">
-                      現在は1kgあたり3,500円前後が平均的な相場だと考えています。円安や原材料費の影響で変動はありますが、この数値を基準にコスパを判断しています。
+                      現在は1kgあたり5,500円前後が平均的な相場だと考えています。円安や原材料費の影響で変動はありますが、この数値を基準にコスパを判断しています。
                     </p>
                   </div>
                   <div>
