@@ -6,6 +6,8 @@ import { products, productCategories } from "@/data/products";
 
 export default function SupplementsPage() {
   const [selectedCategory, setSelectedCategory] = useState("すべて");
+  const [isProteinOpen, setIsProteinOpen] = useState(false);
+  const [isCreatineOpen, setIsCreatineOpen] = useState(false);
 
   const filteredProducts = useMemo(() => {
     if (selectedCategory === "すべて") return products;
@@ -35,52 +37,92 @@ export default function SupplementsPage() {
         </div>
       </div>
 
-      {/* Research Criteria Section */}
-      <div className="mb-16 bg-white border border-gray-100 rounded-[2.5rem] p-8 md:p-12 shadow-sm">
-        <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-          <span className="text-primary">📋</span>
-          研究室で見ているプロテインの判断基準
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
-                価格の相場感
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                現在は1kgあたり5,500円前後が平均的な相場だと考えています。円安や原材料費の影響で変動はありますが、この数値を基準にコスパを判断しています。
-              </p>
+      {/* Criteria Accordion Section */}
+      <div className="space-y-4 mb-16">
+        {/* Protein Criteria */}
+        <div className="bg-white border border-gray-100 rounded-[2rem] overflow-hidden shadow-sm">
+          <button 
+            onClick={() => setIsProteinOpen(!isProteinOpen)}
+            className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-primary text-xl">📋</span>
+              <h2 className="text-lg font-bold text-gray-900">プロテインの判断基準を読む</h2>
             </div>
-            <div>
-              <h3 className="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
-                タンパク質含有量と質
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                1杯あたり20g前後が目安ですが、数字だけでは判断しません。安価なアミノ酸を追加して数値を嵩増ししている製品もあるため、原料の信頼性を重視します。
-              </p>
+            <span className={`transform transition-transform duration-300 ${isProteinOpen ? "rotate-180" : ""}`}>
+              ▼
+            </span>
+          </button>
+          
+          <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isProteinOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}>
+            <div className="px-8 pb-8 md:px-12 md:pb-12 border-t border-gray-50 pt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                      価格の相場観
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      現在は1kgあたり3,500円前後が平均的な相場だと考えています。円安や原材料費の影響で変動はありますが、この数値を基準にコスパを判断しています。
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                      タンパク質含有量と質
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      1杯あたり20g前後が目安ですが、数字だけでは判断しません。安価なアミノ酸を追加して数値を嵩増ししている製品もあるため、原料の信頼性を重視します。
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                      品質管理体制
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      自社工場の有無や「インフォームドチョイス」等の第三者認証をチェックします。重金属や異物混入のリスク管理が公開されているものは安心材料になります。
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                      追加成分への考え方
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      ビタミンやアミノ酸の追加訴求は最優先しません。プロテインはタンパク質補給が主目的。必要ならマルチビタミンを別で摂る方が調整がシンプルです。
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
-                品質管理体制
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                自社工場の有無や「インフォームドチョイス」等の第三者認証をチェックします。重金属や異物混入のリスク管理が公開されているものは安心材料になります。
-              </p>
+        </div>
+
+        {/* Creatine Criteria */}
+        <div className="bg-gray-50 border border-gray-100 rounded-[2rem] overflow-hidden">
+          <button 
+            onClick={() => setIsCreatineOpen(!isCreatineOpen)}
+            className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-gray-100 transition-colors"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-primary text-xl">📋</span>
+              <h2 className="text-lg font-bold text-gray-900">クレアチンの判断基準を読む</h2>
             </div>
-            <div>
-              <h3 className="text-sm font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
-                追加成分への考え方
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                ビタミンやアミノ酸の追加訴求は最優先しません。プロテインはタンパク質補給が主目的。必要ならマルチビタミンを別で摂る方が調整がシンプルです。
+            <span className={`transform transition-transform duration-300 ${isCreatineOpen ? "rotate-180" : ""}`}>
+              ▼
+            </span>
+          </button>
+          
+          <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isCreatineOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
+            <div className="px-8 pb-8 md:px-12 md:pb-12 border-t border-gray-100 pt-8">
+              <p className="text-sm text-gray-600 leading-relaxed max-w-3xl">
+                クレアチンはプロテインに比べて構造が非常に単純なため、ブランドによる「質」の差が出にくい成分です。
+                高価なものを選ぶ必要はなく、<strong className="text-gray-900 font-bold">「安価であること」</strong>と<strong className="text-gray-900 font-bold">「サプリメントを専門的に扱っている信頼できるブランドであること」</strong>の2点さえ満たしていれば、安価な製品で十分な成果が期待できます。
               </p>
             </div>
           </div>

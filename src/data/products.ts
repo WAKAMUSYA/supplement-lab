@@ -45,5 +45,29 @@ export const products: Product[] = [
     amazonUrl: 'https://amzn.to/4nof8GP',
     rakutenUrl: 'https://a.r10.to/h9oUJN',
     isPersonalUse: true
+  },
+  {
+    id: 'grong-creatine-500g',
+    name: 'グロング クレアチン モノハイドレート 500g',
+    category: 'クレアチン',
+    image: '/images/products/grong-creatine.jpg',
+    comment: '高純度99.9%のクレアチン。クレアチンは非常にシンプルな成分のため、高価なものを選ぶ必要はありません。信頼できるブランドの安価なもので十分です。',
+    points: ['高純度99.9%', '抜群のコストパフォーマンス', '国内ブランドの安心感'],
+    target: 'サプリメント代を抑えつつ、確実に成果を出したい全ての人',
+    amazonUrl: 'https://amzn.to/4ni2lWi',
+    rakutenUrl: 'https://a.r10.to/hgCMsc',
+    isPersonalUse: true
+  },
+  {
+    id: 'naturemade-super-multi',
+    name: 'ネイチャーメイド スーパーマルチビタミン&ミネラル',
+    category: 'ビタミン・ミネラル',
+    image: '/images/products/naturemade.jpg',
+    comment: 'ドラッグストア等でも容易に入手可能な定番のマルチビタミン。1日1粒で12種類のビタミンと7種類のミネラルを補給できる利便性が最大の特徴です。ベースサプリとして非常に信頼性の高い一品です。',
+    points: ['1日1粒の圧倒的な手軽さ', '広範なビタミン・ミネラルを網羅', '大塚製薬による国内品質管理'],
+    target: 'サプリメントの数を増やしたくない人、食事の偏りが気になる全ての方',
+    amazonUrl: 'https://amzn.to/4dhyE2Y',
+    rakutenUrl: 'https://a.r10.to/h5YTpS',
+    isPersonalUse: true
   }
 ];

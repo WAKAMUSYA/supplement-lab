@@ -34,12 +34,14 @@ export default function RootLayout({
               <Link href="/" className="text-lg font-bold gradient-text">筋トレサプリ研究室</Link>
               <p className="text-sm text-gray-500 mt-2">エビデンスに基づいた中立的なサプリメント図鑑</p>
             </div>
-            <div className="flex justify-center gap-6 text-sm text-gray-600 mb-8">
-              <Link href="/ingredients" className="hover:text-primary">成分一覧</Link>
-              <Link href="/purposes" className="hover:text-primary">目的別</Link>
-              <Link href="/articles" className="hover:text-primary">読み物</Link>
-              <Link href="/faq" className="hover:text-primary">FAQ</Link>
-              <Link href="/about" className="hover:text-primary">研究室について</Link>
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-medium text-gray-600 mb-8">
+              <Link href="/ingredients" className="hover:text-primary transition-colors">成分一覧</Link>
+              <Link href="/purposes" className="hover:text-primary transition-colors">目的から探す</Link>
+              <Link href="/stacks" className="hover:text-primary transition-colors">スタックガイド</Link>
+              <Link href="/articles" className="hover:text-primary transition-colors">読み物</Link>
+              <Link href="/supplements" className="hover:text-primary transition-colors">参考サプリ</Link>
+              <Link href="/faq" className="hover:text-primary transition-colors">よくある質問</Link>
+              <Link href="/about" className="hover:text-primary transition-colors">研究室について</Link>
             </div>
             <div className="max-w-2xl mx-auto px-4 py-4 bg-yellow-50 border border-yellow-100 rounded-lg text-xs text-yellow-800 mb-8">
               <p className="font-bold mb-1">【免責事項】</p>
