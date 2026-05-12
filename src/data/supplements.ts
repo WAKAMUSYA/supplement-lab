@@ -14,6 +14,10 @@ export interface Supplement {
   precautions: string[];
   misconceptions: string[];
   relatedSupplements: string[]; // slugs
+  references?: {
+    title: string;
+    url: string;
+  }[];
 }
 
 export const supplements: Supplement[] = [
@@ -42,7 +46,21 @@ export const supplements: Supplement[] = [
       '「ステロイドと同じ副作用がある」というのは誤解です。',
       '「ハゲる」という説は、現在の科学的根拠では否定されています。'
     ],
-    relatedSupplements: ['beta-alanine', 'protein', 'hmb']
+    relatedSupplements: ['beta-alanine', 'protein', 'hmb'],
+    references: [
+      {
+        title: "International Society of Sports Nutrition position stand: safety and efficacy of creatine supplementation in exercise, sport, and medicine",
+        url: "https://pubmed.ncbi.nlm.nih.gov/28615996/"
+      },
+      {
+        title: "Common questions and misconceptions about creatine supplementation: what does the scientific evidence really show?",
+        url: "https://pubmed.ncbi.nlm.nih.gov/33557850/"
+      },
+      {
+        title: "Effect of creatine supplementation on body composition and performance: a meta-analysis",
+        url: "https://pubmed.ncbi.nlm.nih.gov/12701815/"
+      }
+    ]
   },
   {
     id: 'beta-alanine',
@@ -66,7 +84,17 @@ export const supplements: Supplement[] = [
     misconceptions: [
       '「即効性がある」わけではなく、数週間継続して筋肉内の濃度を高める必要があります。'
     ],
-    relatedSupplements: ['creatine', 'caffeine']
+    relatedSupplements: ['creatine', 'caffeine'],
+    references: [
+      {
+        title: "International Society of Sports Nutrition position stand: Beta-Alanine",
+        url: "https://pubmed.ncbi.nlm.nih.gov/26175657/"
+      },
+      {
+        title: "Beta-alanine supplementation to improve exercise capacity and performance: a systematic review and meta-analysis",
+        url: "https://pubmed.ncbi.nlm.nih.gov/27797740/"
+      }
+    ]
   },
   {
     id: 'caffeine',
@@ -92,7 +120,17 @@ export const supplements: Supplement[] = [
     misconceptions: [
       '「強い脱水作用がある」と言われますが、運動中の摂取であれば大きな問題にはならないことが示されています。'
     ],
-    relatedSupplements: ['citrulline', 'beta-alanine']
+    relatedSupplements: ['citrulline', 'beta-alanine'],
+    references: [
+      {
+        title: "International Society of Sports Nutrition position stand: caffeine and exercise performance",
+        url: "https://pubmed.ncbi.nlm.nih.gov/33388079/"
+      },
+      {
+        title: "Effects of caffeine intake on muscle strength and power: a systematic review and meta-analysis",
+        url: "https://pubmed.ncbi.nlm.nih.gov/29420388/"
+      }
+    ]
   },
   {
     id: 'citrulline',
@@ -116,7 +154,17 @@ export const supplements: Supplement[] = [
     misconceptions: [
       '「アルギニンよりもシトルリンの方が血中のアルギニン濃度を効率よく高める」ことが分かっています。'
     ],
-    relatedSupplements: ['caffeine', 'beta-alanine', 'arginine']
+    relatedSupplements: ['caffeine', 'beta-alanine', 'arginine'],
+    references: [
+      {
+        title: "Citrulline malate enhances athletic anaerobic performance and relieves muscle soreness",
+        url: "https://pubmed.ncbi.nlm.nih.gov/20386132/"
+      },
+      {
+        title: "Effects of Citrulline Supplementation on Exercise Performance in Humans: A Review of the Current Literature",
+        url: "https://pubmed.ncbi.nlm.nih.gov/31974471/"
+      }
+    ]
   },
   {
     id: 'protein',
@@ -141,7 +189,17 @@ export const supplements: Supplement[] = [
       '「飲むだけで筋肉がつく魔法の粉」ではありません。',
       '「女性が飲むとムキムキになる」というのも間違いです。'
     ],
-    relatedSupplements: ['eaa', 'bcaa', 'creatine', 'hmb']
+    relatedSupplements: ['eaa', 'bcaa', 'creatine', 'hmb'],
+    references: [
+      {
+        title: "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+        url: "https://pubmed.ncbi.nlm.nih.gov/28698222/"
+      },
+      {
+        title: "International Society of Sports Nutrition position stand: protein and exercise",
+        url: "https://pubmed.ncbi.nlm.nih.gov/28642676/"
+      }
+    ]
   },
   {
     id: 'eaa',
@@ -165,7 +223,13 @@ export const supplements: Supplement[] = [
     misconceptions: [
       '「プロテインがあればEAAは不要」とも言われますが、吸収速度の速さを活かした使い分けが有効です。'
     ],
-    relatedSupplements: ['bcaa', 'protein']
+    relatedSupplements: ['bcaa', 'protein'],
+    references: [
+      {
+        title: "Branched-Chain Amino Acid Ingestion Can Stimulate Muscle Protein Synthesis Following Resistance Exercise in Humans",
+        url: "https://pubmed.ncbi.nlm.nih.gov/28638350/"
+      }
+    ]
   },
   {
     id: 'bcaa',
@@ -188,7 +252,13 @@ export const supplements: Supplement[] = [
     misconceptions: [
       '「筋肉を大きくするためにBCAAだけ飲む」のは非効率です。全ての必須アミノ酸が必要です。'
     ],
-    relatedSupplements: ['eaa', 'citrulline']
+    relatedSupplements: ['eaa', 'citrulline'],
+    references: [
+      {
+        title: "Branched-chain amino acids and muscle protein synthesis in humans: myth or reality?",
+        url: "https://pubmed.ncbi.nlm.nih.gov/28852372/"
+      }
+    ]
   },
   {
     id: 'multivitamin',
@@ -236,7 +306,13 @@ export const supplements: Supplement[] = [
     misconceptions: [
       '「飲むだけでテストステロンが爆増する」というわけではなく、不足している場合に正常値に戻す助けになります。'
     ],
-    relatedSupplements: ['multivitamin', 'magnesium']
+    relatedSupplements: ['multivitamin', 'magnesium'],
+    references: [
+      {
+        title: "Vitamin D and the Athlete: Current Perspectives and New Challenges",
+        url: "https://pubmed.ncbi.nlm.nih.gov/29420871/"
+      }
+    ]
   },
   {
     id: 'magnesium',
@@ -261,7 +337,13 @@ export const supplements: Supplement[] = [
     misconceptions: [
       '「吸収率が非常に低い」形態（酸化マグネシウムなど）があるため、選ぶ際は形態に注意が必要です。'
     ],
-    relatedSupplements: ['vitamin-d', 'multivitamin']
+    relatedSupplements: ['vitamin-d', 'multivitamin'],
+    references: [
+      {
+        title: "Can Magnesium Enhance Exercise Performance?",
+        url: "https://pubmed.ncbi.nlm.nih.gov/28854833/"
+      }
+    ]
   },
   {
     id: 'hmb',
@@ -285,7 +367,17 @@ export const supplements: Supplement[] = [
     misconceptions: [
       '「プロテイン20杯分の効果がある」という広告表現は誤解を招きやすいですが、あくまでロイシンからの代謝効率の話です。'
     ],
-    relatedSupplements: ['protein', 'eaa', 'creatine']
+    relatedSupplements: ['protein', 'eaa', 'creatine'],
+    references: [
+      {
+        title: "International Society of Sports Nutrition Position Stand: beta-hydroxy-beta-methylbutyrate (HMB)",
+        url: "https://pubmed.ncbi.nlm.nih.gov/23374455/"
+      },
+      {
+        title: "Effect of beta-hydroxy-beta-methylbutyrate (HMB) supplementation on muscle mass, muscle strength, and body composition",
+        url: "https://pubmed.ncbi.nlm.nih.gov/26135345/"
+      }
+    ]
   },
   {
     id: 'ashwagandha',
@@ -310,7 +402,13 @@ export const supplements: Supplement[] = [
     misconceptions: [
       '「飲んですぐに筋力が上がる」即効性のある成分ではなく、数週間の継続摂取が必要です。'
     ],
-    relatedSupplements: ['magnesium', 'vitamin-d']
+    relatedSupplements: ['magnesium', 'vitamin-d'],
+    references: [
+      {
+        title: "Examining the effect of Withania somnifera supplementation on muscle strength and recovery",
+        url: "https://pubmed.ncbi.nlm.nih.gov/26609282/"
+      }
+    ]
   },
   {
     id: 'zinc',
@@ -335,7 +433,13 @@ export const supplements: Supplement[] = [
     misconceptions: [
       '「飲むだけで性機能が爆発的に上がる」というわけではなく、不足による低下を防ぐ役割が大きいです。'
     ],
-    relatedSupplements: ['magnesium', 'multivitamin']
+    relatedSupplements: ['magnesium', 'multivitamin'],
+    references: [
+      {
+        title: "Zinc and its importance for human health: An integrative review",
+        url: "https://pubmed.ncbi.nlm.nih.gov/23628174/"
+      }
+    ]
   },
   {
     id: 'glutamine',
@@ -359,7 +463,13 @@ export const supplements: Supplement[] = [
     misconceptions: [
       '「健常な人の筋肥大には直接的な効果は薄い」という研究データが多いですが、コンディション維持には非常に有用です。'
     ],
-    relatedSupplements: ['protein', 'eaa']
+    relatedSupplements: ['protein', 'eaa'],
+    references: [
+      {
+        title: "The Influence of Oral L-Glutamine Supplementation on Muscle Recovery Performance and Muscle Soreness",
+        url: "https://pubmed.ncbi.nlm.nih.gov/25811544/"
+      }
+    ]
   },
   {
     id: 'arginine',
@@ -455,7 +565,13 @@ export const supplements: Supplement[] = [
     misconceptions: [
       '「ただの砂糖と同じ」ではありません。浸透圧が低く、胃腸への負担を抑えながら素早くエネルギーを補給できます。'
     ],
-    relatedSupplements: ['protein', 'eaa', 'creatine']
+    relatedSupplements: ['protein', 'eaa', 'creatine'],
+    references: [
+      {
+        title: "International society of sports nutrition conference and expo review: exercise & sports nutrition review update",
+        url: "https://pubmed.ncbi.nlm.nih.gov/30068354/"
+      }
+    ]
   },
   {
     id: 'melatonin',
@@ -480,7 +596,13 @@ export const supplements: Supplement[] = [
     misconceptions: [
       '「依存性が非常に高い」と誤解されがちですが、適切に使用すれば安全性は高いとされています（ただし長期使用は専門家に相談）。'
     ],
-    relatedSupplements: ['magnesium', 'gaba', 'ashwagandha']
+    relatedSupplements: ['magnesium', 'gaba', 'ashwagandha'],
+    references: [
+      {
+        title: "Meta-Analysis: Melatonin for the Treatment of Primary Sleep Disorders",
+        url: "https://pubmed.ncbi.nlm.nih.gov/23691095/"
+      }
+    ]
   },
   {
     id: 'coq10',
@@ -671,7 +793,13 @@ export const supplements: Supplement[] = [
     misconceptions: [
       '「脂肪だから太る」と避けがちですが、むしろ代謝を整えるために不可欠な「油」です。'
     ],
-    relatedSupplements: ['multivitamin', 'curcumin']
+    relatedSupplements: ['multivitamin', 'curcumin'],
+    references: [
+      {
+        title: "Applications of omega-3 polyunsaturated fatty acid supplementation for sport performance",
+        url: "https://pubmed.ncbi.nlm.nih.gov/30484738/"
+      }
+    ]
   },
   {
     id: 'ala',

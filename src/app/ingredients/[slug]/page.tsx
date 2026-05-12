@@ -150,6 +150,37 @@ export default async function IngredientPage({ params }: { params: Promise<{ slu
               ))}
             </div>
           </section>
+
+          {item.references && item.references.length > 0 && (
+            <section className="mt-12 pt-12 border-t border-gray-100">
+              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                <span className="text-primary">■</span> エビデンス・参考文献
+              </h2>
+              <ul className="space-y-4">
+                {item.references.map((ref, i) => (
+                  <li key={i} className="flex gap-3 group">
+                    <div className="flex-shrink-0 w-6 h-6 bg-gray-100 rounded-md flex items-center justify-center text-gray-500 text-xs font-bold">
+                      {i + 1}
+                    </div>
+                    <a 
+                      href={ref.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-sm text-gray-600 hover:text-primary transition-colors leading-relaxed"
+                    >
+                      {ref.title}
+                      <span className="inline-block ml-1 text-gray-400 group-hover:text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                        ↗
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-6 text-xs text-gray-400 italic">
+                ※当サイトは科学的根拠（エビデンス）に基づく情報提供を心がけていますが、サプリメントの効果には個人差があります。
+              </p>
+            </section>
+          )}
         </div>
 
         {/* Sidebar */}
