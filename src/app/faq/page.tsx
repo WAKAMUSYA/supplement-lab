@@ -10,8 +10,15 @@ export const metadata: Metadata = {
   },
 };
 
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
+
 export default function FAQPage() {
   const categories = ['基本', '摂取方法', '安全性', '効果'] as const;
+
+  const breadcrumbItems = [
+    { name: "ホーム", item: "/" },
+    { name: "よくある質問", item: "/faq" },
+  ];
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -28,6 +35,7 @@ export default function FAQPage() {
 
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
+      <BreadcrumbJsonLd items={breadcrumbItems} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

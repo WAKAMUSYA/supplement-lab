@@ -8,10 +8,22 @@ export const metadata: Metadata = {
   },
 };
 
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
+
 export default function ArticlesLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  const breadcrumbItems = [
+    { name: "ホーム", item: "/" },
+    { name: "読み物", item: "/articles" },
+  ];
+
+  return (
+    <>
+      <BreadcrumbJsonLd items={breadcrumbItems} />
+      {children}
+    </>
+  );
 }
