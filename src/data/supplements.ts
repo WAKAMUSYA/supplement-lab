@@ -442,6 +442,37 @@ export const supplements: Supplement[] = [
     ]
   },
   {
+    id: 'potassium',
+    name: 'カリウム',
+    slug: 'potassium',
+    overview: '細胞内の水分バランスを保ち、筋肉の正常な収縮と神経伝達をサポートする必須ミネラルです。',
+    benefits: [
+      '筋肉の収縮の正常化',
+      '細胞内の水分保持（パンプ感の維持）',
+      '過剰なナトリウムの排出をサポート（血圧調整）',
+      '疲労感の軽減'
+    ],
+    evidenceLevel: '高',
+    mainPurposes: ['疲労回復', '持久力'],
+    dosage: '1日合計2,500-3,000mg程度（食品からの摂取が主。サプリメントは上限に注意）',
+    timing: '毎食後、またはトレーニング前後',
+    targetAudience: '筋肉のこわばりを感じる人、ナトリウム摂取が多い人、持久系アスリート',
+    precautions: [
+      '腎機能に疾患がある場合は、摂取量を厳格に制限する必要があるため、必ず医師に相談してください。',
+      'サプリメントでの大量摂取は心臓への負担になるリスクがあります。'
+    ],
+    misconceptions: [
+      '「飲めば飲むほど良い」わけではなく、ナトリウムとのバランスが最も重要です。'
+    ],
+    relatedSupplements: ['sodium', 'magnesium'],
+    references: [
+      {
+        title: "Potassium Intake, Bioavailability, Hypertension, and Skeletal Muscle",
+        url: "https://pubmed.ncbi.nlm.nih.gov/27455317/"
+      }
+    ]
+  },
+  {
     id: 'glutamine',
     name: 'グルタミン',
     slug: 'glutamine',
@@ -847,6 +878,37 @@ export const supplements: Supplement[] = [
       '「ホエイより劣る」わけではなく、用途（タイミング）が異なるだけです。'
     ],
     relatedSupplements: ['protein', 'magnesium']
+  },
+  {
+    id: 'sodium',
+    name: 'ナトリウム（食塩）',
+    slug: 'sodium',
+    overview: '汗とともに失われる主要な電解質です。水分補給の効率を高め、筋肉の収縮をスムーズに保つために不可欠な成分です。',
+    benefits: [
+      '脱水の予防（水分の保持）',
+      '筋肉の痙攣（足がつる等）の防止',
+      '神経伝達と筋肉収縮のサポート',
+      '運動中のパフォーマンス維持'
+    ],
+    evidenceLevel: '高',
+    mainPurposes: ['持久力', '疲労回復'],
+    dosage: '運動強度や発汗量に応じて、水1Lあたり0.5〜1g程度（塩一つまみ）',
+    timing: 'トレーニング前、およびトレーニング中',
+    targetAudience: '激しく発汗する人、長時間のトレーニングをする人、足がつりやすい人',
+    precautions: [
+      '日常の食事で塩分過多な場合は、追加の摂取は不要です。',
+      '高血圧など持病がある場合は医師に相談してください。'
+    ],
+    misconceptions: [
+      '「ただの水だけ」で補給すると、かえって低ナトリウム血症（水中毒）のリスクが高まる場合があります。'
+    ],
+    relatedSupplements: ['magnesium', 'maltodextrin'],
+    references: [
+      {
+        title: "Optimizing the restoration and maintenance of fluid balance after exercise-induced dehydration",
+        url: "https://pubmed.ncbi.nlm.nih.gov/28400033/"
+      }
+    ]
   },
   {
     id: 'taurine',

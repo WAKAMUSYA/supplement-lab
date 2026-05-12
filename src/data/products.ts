@@ -81,5 +81,17 @@ export const products: Product[] = [
     amazonUrl: 'https://amzn.to/4dhyE2Y',
     rakutenUrl: 'https://a.r10.to/h5YTpS',
     isPersonalUse: true
+  },
+  {
+    id: 'yukishio-120g',
+    name: 'パラダイスプラン 雪塩 宮古島の海の恵み 120g',
+    category: 'ビタミン・ミネラル',
+    image: '/images/products/yukishio.jpg',
+    comment: '圧倒的なミネラル含有量を誇る宮古島の天然塩。非常に粒子が細かく、ワークアウトドリンクに溶かしやすいため、イントラワークアウトの電解質補給に最適です。',
+    points: ['世界でも稀なミネラル含有数', 'パウダー状でドリンクに溶けやすい', '宮古島の地下海水100%'],
+    target: 'トレーニング中の足のつりを防ぎたい人、こだわりの電解質補給をしたい人',
+    amazonUrl: 'https://amzn.to/4u8DRBB',
+    rakutenUrl: 'https://a.r10.to/hPEXhf',
+    isPersonalUse: true
   }
 ];
