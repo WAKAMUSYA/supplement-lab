@@ -25,8 +25,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       publishedTime: article.publishDate,
       authors: [article.author],
     },
+    alternates: {
+      canonical: `/articles/${article.slug}`,
+    },
   };
 }
+
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -40,8 +45,15 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     ? supplements.find(s => s.slug === article.relatedIngredientSlug)
     : null;
 
+  const breadcrumbItems = [
+    { name: "ホーム", item: "/" },
+    { name: "読み物", item: "/articles" },
+    { name: article.title, item: `/articles/${article.slug}` },
+  ];
+
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
+      <BreadcrumbJsonLd items={breadcrumbItems} />
       <nav className="text-sm text-gray-500 mb-8">
         <Link href="/" className="hover:text-primary">ホーム</Link>
         <span className="mx-2">/</span>

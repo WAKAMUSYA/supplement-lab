@@ -1,9 +1,10 @@
-import { MetadataRoute } from "next";
+import { siteConfig } from "@/config/site";
 import { supplements } from "@/data/supplements";
 import { articles } from "@/data/articles";
+import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://supplement-lab.example.com";
+  const baseUrl = siteConfig.url;
 
   // Ingredient pages
   const ingredientUrls = supplements.map((s) => ({

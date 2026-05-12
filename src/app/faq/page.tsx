@@ -1,11 +1,37 @@
 import { faqs } from "@/data/faq";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "よくあるご質問 (FAQ)",
+  description: "サプリメントの選び方、飲み方、安全性など、筋トレサプリに関するよくある疑問にエビデンスベースでお答えします。",
+  alternates: {
+    canonical: "/faq",
+  },
+};
 
 export default function FAQPage() {
   const categories = ['基本', '摂取方法', '安全性', '効果'] as const;
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold mb-4 text-gray-900">よくあるご質問 (FAQ)</h1>
         <p className="text-gray-500 max-w-2xl mx-auto">

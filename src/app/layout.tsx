@@ -6,35 +6,54 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const notoJp = Noto_Sans_JP({ subsets: ["latin"], variable: "--font-noto-jp" });
 
+import { siteConfig } from "@/config/site";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: "筋トレサプリ研究室 | エビデンスに基づくサプリメント図鑑",
-    template: "%s | 筋トレサプリ研究室"
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`
   },
-  description: "クレアチン、プロテイン、カフェインなど、筋トレサプリの成分を科学的根拠に基づいて解説する研究室風メディア。初心者にも分かりやすく、中立的な立場から情報をお届けします。",
-  keywords: ["筋トレ", "サプリメント", "エビデンス", "クレアチン", "プロテイン", "EAA", "ビタミン"],
-  authors: [{ name: "筋トレサプリ研究室" }],
+  description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  authors: siteConfig.authors,
+  creator: siteConfig.name,
   openGraph: {
     type: "website",
     locale: "ja_JP",
-    url: "https://supplement-lab.example.com",
-    siteName: "筋トレサプリ研究室",
-    title: "筋トレサプリ研究室 | エビデンスに基づくサプリメント図鑑",
-    description: "科学的なエビデンスに基づいた中立的なサプリメント図鑑。あなたのトレーニングを支える成分を詳しく解説します。",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: siteConfig.name,
+    description: siteConfig.description,
     images: [
       {
         url: "/images/ogp.png",
         width: 1200,
         height: 630,
-        alt: "筋トレサプリ研究室",
+        alt: siteConfig.name,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "筋トレサプリ研究室 | エビデンスに基づくサプリメント図鑑",
-    description: "科学的なエビデンスに基づいた中立的なサプリメント図鑑。あなたのトレーニングを支える成分を詳しく解説します。",
+    title: siteConfig.name,
+    description: siteConfig.description,
     images: ["/images/ogp.png"],
+    creator: "@supplement_lab",
+  },
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -52,6 +71,22 @@ export default function RootLayout({
     <html lang="ja" className={`${inter.variable} ${notoJp.variable}`}>
       <body className="antialiased min-h-screen flex flex-col">
         {gaId && <GoogleAnalytics gaId={gaId} />}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": siteConfig.name,
+              "url": siteConfig.url,
+              "logo": `${siteConfig.url}/favicon.ico`,
+              "description": siteConfig.description,
+              "sameAs": [
+                siteConfig.links.twitter
+              ]
+            })
+          }}
+        />
         <Navbar />
 
         <main className="flex-grow">

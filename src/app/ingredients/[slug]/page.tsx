@@ -21,8 +21,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${item.name} | 筋トレサプリ研究室`,
       description: item.overview,
     },
+    alternates: {
+      canonical: `/ingredients/${item.slug}`,
+    },
   };
 }
+
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export default async function IngredientPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -45,10 +50,17 @@ export default async function IngredientPage({ params }: { params: Promise<{ slu
     }
   };
 
+  const breadcrumbItems = [
+    { name: "ホーム", item: "/" },
+    { name: "成分一覧", item: "/ingredients" },
+    { name: item.name, item: `/ingredients/${item.slug}` },
+  ];
+
   const related = supplements.filter(s => item.relatedSupplements.includes(s.slug));
 
   return (
     <article className="container mx-auto px-4 py-12 max-w-5xl">
+      <BreadcrumbJsonLd items={breadcrumbItems} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
