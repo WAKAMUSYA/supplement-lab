@@ -35,6 +35,18 @@ export const products: Product[] = [
     isPersonalUse: true
   },
   {
+    id: 'savas-whey-protein-100',
+    name: 'ザバス(SAVAS) ホエイプロテイン100 リッチショコラ味 1kg',
+    category: 'プロテイン',
+    image: '/images/products/savas.jpg',
+    comment: '日本を代表するプロテイン。プロテインの基準はザバスにすると判断しやすい一品です。セールも多く、安い時期を狙うのがおすすめ。※ウエイトゲインやピュアプロテインなどはタンパク質含有量が20gを下回る場合があるので注意が必要です。',
+    points: ['国内シェアNo.1の安心感', '水でも美味しく飲める高い再現性', 'ビタミンB群・C・Dを独自配合'],
+    target: 'プロテイン選びの基準を知りたい人、国産ブランドの安心感を重視する人',
+    amazonUrl: 'https://amzn.to/4d14zpC',
+    rakutenUrl: 'https://a.r10.to/hX3pIF',
+    isPersonalUse: true
+  },
+  {
     id: 'x-plosion-whey-3kg',
     name: 'エクスプロージョン ホエイプロテイン 3kg',
     category: 'プロテイン',
