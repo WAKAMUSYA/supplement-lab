@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   keywords: siteConfig.keywords,
   authors: siteConfig.authors,
   creator: siteConfig.name,
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "ja_JP",
@@ -79,7 +84,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": siteConfig.name,
               "url": siteConfig.url,
-              "logo": `${siteConfig.url}/favicon.ico`,
+              "logo": `${siteConfig.url}/icon.png`,
               "description": siteConfig.description,
               "sameAs": [
                 siteConfig.links.twitter
