@@ -1399,6 +1399,67 @@ export const supplements: Supplement[] = [
       '「お腹の調子を整えるだけ」ではありません。最新の研究では、腸内環境が筋肉の成長やメンタルにまで影響することが示されています。'
     ],
     relatedSupplements: ['glutamine', 'multivitamin']
+  },
+  {
+    id: 'iron',
+    name: '鉄分 (Iron)',
+    slug: 'iron',
+    overview: '全身に酸素を運ぶヘモグロビンの主成分です。長距離ランナーは着地の衝撃による溶血や汗・尿からの鉄分損失が多く、不足しやすい必須ミネラルです。',
+    benefits: [
+      '酸素運搬能力の向上による持久力維持',
+      '運動中のエネルギー産生の効率化',
+      '疲労感・倦怠感の軽減'
+    ],
+    evidenceLevel: '高',
+    mainPurposes: ['持久力', '疲労回復'],
+    dosage: '成人男性：1日7.5-10mg、成人女性：10.5-15mg（アスリートは多めが必要になるが、過剰摂取に注意）',
+    timing: '食事と一緒に、または空腹時に（ビタミンCと一緒に摂ると吸収効率が劇的に高まります）',
+    targetAudience: '持久系アスリート（マラソンランナー）、貧血気味の人、女性トレーニー',
+    precautions: [
+      '鉄分の過剰摂取は肝臓などへの過剰蓄積を引き起こし、内臓障害の原因になるため、サプリでの過剰な摂取は避けてください。',
+      'コーヒーや緑茶に含まれるタンニンは鉄の吸収を阻害するため、摂取前後1時間は控えるのが望ましいです。',
+      '鉄サプリの過剰な常用は避け、定期的な血液検査でフェリチン値を確認しながら摂取するのが理想的です。'
+    ],
+    misconceptions: [
+      '「貧血になってから飲めば良い」と思われがちですが、血中のフェリチン（貯蔵鉄）が徐々に枯渇する「潜在性鉄欠乏」の段階から運動パフォーマンスは低下し始めます。'
+    ],
+    relatedSupplements: ['multivitamin', 'potassium'],
+    references: [
+      {
+        title: "Iron Depletion in Athletes: A Clinical Guide",
+        url: "https://pubmed.ncbi.nlm.nih.gov/31383391/"
+      }
+    ]
+  },
+  {
+    id: 'glycerol',
+    name: 'グリセロール (Glycerol)',
+    slug: 'glycerol',
+    overview: '水分を強力に保持する性質を持つアルコールの一種です。体内の水分を通常以上に蓄える「ハイパーハイドレーション（過加水）」を引き起こし、マラソンなどの長時間の持久運動における脱水を予防します。',
+    benefits: [
+      'ハイパーハイドレーション効果（体水分量の増加）',
+      '脱水症状の予防と運動中の体温上昇抑制',
+      '心血管への負担低減（一回拍出量の維持）'
+    ],
+    evidenceLevel: '中',
+    mainPurposes: ['持久力'],
+    dosage: '体重1kgあたり1.0-1.2gのグリセロールを、約26ml/kgの水と混ぜてゆっくりと摂取する。',
+    timing: '運動（レース）開始の2-3時間前までに、時間をかけてゆっくり飲み干す。',
+    targetAudience: '暑熱環境下で長時間の持久運動を行うランナー、サイクリスト',
+    precautions: [
+      '一時的に体重が1〜2kg増加（水分保持によるもの）するため、レース時のエネルギー消費と脱水予防のバランスを考慮する必要があります。',
+      '一気飲みすると頭痛や吐き気、胃腸障害を引き起こすことがあるため、必ず希釈してゆっくりと摂取してください。'
+    ],
+    misconceptions: [
+      '「ただの糖質（エネルギー源）」と思われがちですが、主な効果はエネルギー補給ではなく、浸透圧変化を利用した「水分保持」です。'
+    ],
+    relatedSupplements: ['sodium', 'potassium'],
+    references: [
+      {
+        title: "Glycerol hyperhydration: keep your cool during exercise in the heat",
+        url: "https://pubmed.ncbi.nlm.nih.gov/20092365/"
+      }
+    ]
   }
 ];
 

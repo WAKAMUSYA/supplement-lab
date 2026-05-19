@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   keywords: siteConfig.keywords,
   authors: siteConfig.authors,
   creator: siteConfig.name,
+  icons: {
+    icon: "/icon.png?v=2",
+    shortcut: "/favicon.ico?v=2",
+    apple: "/apple-icon.png?v=2",
+  },
   openGraph: {
     type: "website",
     locale: "ja_JP",
